@@ -1,0 +1,39 @@
+
+.caixa-principal{
+  background-color: floralwhite;
+  min-height: 100px;
+  overflow: hidden;
+  border-radius: 25px;
+  align-items: center;
+  padding: 30px 30px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  text-align: center;
+  margin:auto;
+  position: relative;;
+  width: 600px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #feab6b;
+  font-family: "Roboto Slab", serif;
+  font-size: 70px;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("https://64.media.tumblr.com/3e3bcfdb3af92be8b8b92b02989cd7eb/tumblr_inline_mkjlpy0nx21qz4rgp.png");
+}
+
+button {
+  background-color: #9bcfe0;
+  border: none;
+  position: center;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
