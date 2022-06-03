@@ -20,4 +20,9 @@ class VagaRepository implements VagaDAO{
         entityManager.persist(vaga)
         return vaga
     }
+
+    @Override
+    List<Vaga[]> listarVagas() {
+        return entityManager.createQuery("SELECT v FROM Vaga v").getResultList()
+    }
 }

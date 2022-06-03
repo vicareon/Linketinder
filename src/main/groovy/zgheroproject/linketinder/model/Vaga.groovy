@@ -3,11 +3,14 @@ package zgheroproject.linketinder.model
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
+import javax.persistence.OneToMany
 import javax.persistence.Table
+import java.sql.Array
+import org.hibernate.mapping.Array
 
 @Entity
-@Table(name = "vagas", schema = "public")
-class Vaga {
+@Table(name = "vagas")
+class Vaga implements Serializable{
     @Id
     long id_vgs
 
@@ -24,9 +27,9 @@ class Vaga {
     private String cnpjEmpresa
 
     @Column(name = "competencias_vgs")
-    private ArrayList<Competencia> listaCompetencias
+    private ArrayList listaCompetencias
 
-    Vaga(String nome, String estado, String descricao, String cnpjEmpresa, ArrayList<Competencia> listaCompetencias) {
+    Vaga(String nome, String estado, String descricao, String cnpjEmpresa, ArrayList listaCompetencias) {
         this.nome = nome
         this.estado = estado
         this.descricao = descricao
@@ -74,7 +77,7 @@ class Vaga {
         return listaCompetencias
     }
 
-    void setListaCompetencias(ArrayList<Competencia> listaCompetencias) {
+    void setListaCompetencias(ArrayList listaCompetencias) {
         this.listaCompetencias = listaCompetencias
     }
 }

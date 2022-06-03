@@ -13,4 +13,8 @@ class CandidatoController{
     Candidato inserirCandidato(Candidato candidato) {
         return candidatoService.inserirCandidato(candidato)
     }
+
+    List<Candidato> listarCandidatos(){
+        return candidatoService.listarCandidatos()
+    }
 }

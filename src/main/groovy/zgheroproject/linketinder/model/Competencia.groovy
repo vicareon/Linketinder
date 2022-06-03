@@ -1,13 +1,17 @@
 package zgheroproject.linketinder.model
 
+import org.springframework.data.jpa.repository.Query
+
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
+import javax.persistence.NamedQueries
+import javax.persistence.NamedQuery
 import javax.persistence.Table
 
 @Entity
 @Table(name = "competencias", schema = "public")
-class Competencia {
+class Competencia implements Serializable{
     @Id
     @Column(name = "nome_cmp")
     String nome

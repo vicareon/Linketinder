@@ -14,4 +14,8 @@ class VagaService {
     Vaga inserirVaga(Vaga vaga){
         return vagaRepository.inserirVaga(vaga)
     }
+
+    List<Vaga[]> listarVagas(){
+        return vagaRepository.listarVagas()
+    }
 }

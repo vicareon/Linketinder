@@ -1,5 +1,6 @@
 package zgheroproject.linketinder.microservice
 
+import org.springframework.web.bind.annotation.CrossOrigin
 import zgheroproject.linketinder.model.Candidato
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -11,15 +12,19 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.ResponseStatus
 import org.springframework.web.bind.annotation.RestController
+import zgheroproject.linketinder.model.CandidatoCompetencia
+import zgheroproject.linketinder.model.Competencia
 import zgheroproject.linketinder.model.Empresa
+import zgheroproject.linketinder.model.Vaga
 
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
 
 @RestController
+@CrossOrigin
 @RequestMapping("/cadastro")
 @SpringBootApplication
-@EntityScan(basePackages = "com.example.model")
+@EntityScan(basePackages = "zgheroproject.linketinder.model")
 class MicroserviceCadastroApplication {
     static void main(String[] args) {
         SpringApplication.run(MicroserviceCadastroApplication, args)
@@ -42,5 +47,50 @@ class MicroserviceCadastroApplication {
     Empresa inserirEmpresa(@RequestBody Empresa empresa) {
         entityManager.persist(empresa)
         return empresa
+    }
+
+    @Transactional
+    @RequestMapping(value = "/empresa/vaga", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    Vaga inserirVaga(@RequestBody Vaga vaga) {
+        entityManager.persist(vaga)
+        return vaga
+    }
+
+    @Transactional
+    @RequestMapping(value = "/candidato/competencia", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    CandidatoCompetencia inserirCandidatoCompetencia(@RequestBody CandidatoCompetencia candidatoCompetencia) {
+        entityManager.persist(candidatoCompetencia)
+        return candidatoCompetencia
+    }
+
+    @Transactional
+    @RequestMapping(value = "/candidato/cria-competencia", method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    Competencia inserirCompetencia(@RequestBody Competencia competencia) {
+        entityManager.persist(competencia)
+        return competencia
+    }
+
+    @Transactional
+    @RequestMapping(value = "/candidato/lista-competencia", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    List<Competencia> listarCompetencias() {
+        return entityManager.createQuery("SELECT c FROM Competencia c").getResultList()
+    }
+
+    @Transactional
+    @RequestMapping(value = "/lista/candidatos", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    List<Candidato> listarCandidatos() {
+        return entityManager.createQuery("SELECT c FROM Candidato c").getResultList()
+    }
+
+    @Transactional
+    @RequestMapping(value = "/lista/vagas", method = RequestMethod.GET)
+    @ResponseStatus(HttpStatus.OK)
+    List<Vaga> listarVagas() {
+        return entityManager.createQuery("SELECT v FROM Vaga v").getResultList()
     }
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component
 interface CandidatoDAO {
     //void listarCandidatos()
     Candidato inserirCandidato(Candidato candidato)
+    List<Candidato> listarCandidatos()
     /*void deletarCandidato(String buscaCpf)
     void atualizarCandidato(String buscaCpf, int escolhaAtualizaCandidato, String dadoAtualizado)
 

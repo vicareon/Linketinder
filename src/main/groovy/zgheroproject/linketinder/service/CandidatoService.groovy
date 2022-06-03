@@ -13,4 +13,8 @@ class CandidatoService{
     Candidato inserirCandidato(Candidato candidato){
         return candidatoRepository.inserirCandidato(candidato)
     }
+
+    List<Candidato> listarCandidatos(){
+        return candidatoRepository.listarCandidatos()
+    }
 }

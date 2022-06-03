@@ -6,6 +6,7 @@ import zgheroproject.linketinder.model.Vaga
 interface VagaDAO {
     //void listarVagas()
     Vaga inserirVaga(Vaga vaga)
+    List<Vaga[]> listarVagas()
     /*void deletarVaga(String cnpj)
     void atualizarVaga(String buscaCnpj, int escolhaAtualizarVaga, String dadoAtualizado)
 
