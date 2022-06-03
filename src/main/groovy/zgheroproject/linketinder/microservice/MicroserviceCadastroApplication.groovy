@@ -74,7 +74,7 @@ class MicroserviceCadastroApplication {
     }
 
     @Transactional
-    @RequestMapping(value = "/candidato/lista-competencia", method = RequestMethod.GET)
+    @RequestMapping(value = "/lista/competencia", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     List<Competencia> listarCompetencias() {
         return entityManager.createQuery("SELECT c FROM Competencia c").getResultList()

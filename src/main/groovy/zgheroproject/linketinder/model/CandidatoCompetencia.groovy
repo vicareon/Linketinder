@@ -10,33 +10,33 @@ import javax.persistence.Table
 class CandidatoCompetencia implements Serializable{
     @Id
     @Column(name="id_cnd")
-    String cpfCandidato
+    String cpf
 
     @Id
     @Column(name="id_cmp")
-    String nomeCompetencia
+    String nome
 
-    CandidatoCompetencia(String cpfCandidato, String nomeCompetencia) {
-        this.cpfCandidato = cpfCandidato
-        this.nomeCompetencia = nomeCompetencia
+    CandidatoCompetencia(String cpf, String nome) {
+        this.cpf = cpf
+        this.nome = nome
     }
 
     CandidatoCompetencia() {
     }
 
-    String getCpfCandidato() {
-        return cpfCandidato
+    String getCpf() {
+        return cpf
     }
 
-    void setCpfCandidato(String cpfCandidato) {
-        this.cpfCandidato = cpfCandidato
+    void setCpf(String cpf) {
+        this.cpf = cpf
     }
 
-    String getNomeCompetencia() {
-        return nomeCompetencia
+    String getNome() {
+        return nome
     }
 
-    void setNomeCompetencia(String nomeCompetencia) {
-        this.nomeCompetencia = nomeCompetencia
+    void setNome(String nome) {
+        this.nome = nome
     }
 }
