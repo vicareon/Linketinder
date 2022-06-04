@@ -96,4 +96,13 @@ Utilizei o Postman para testagem das APIs. Segue uma lista de tutoriais e artigo
 - [Loop through JSON Array](https://stackoverflow.com/questions/64589527/loop-through-json-array-angular-10), do StackOverflow
 - [How do I bind to list of checkbox values with AngularJS?](https://stackoverflow.com/questions/14514461/how-do-i-bind-to-list-of-checkbox-values-with-angularjs), do StackOverflow
 
-**Data de entrega**: 03/05/22
+**Data de entrega**: 03/06/22
+
+## Trilha 3: Spock
+**Assunto**: Framework Spock
+
+**Descrição do desafio**: Implementação de todos os testes unitários possíveis utilizando Spock.
+
+**Observações pessoais**: -
+
+**Data de entrega**: pendente
