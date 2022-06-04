@@ -36,7 +36,7 @@ Aqui estão os tutoriais e artigos que me ajudaram:
 
 **Descrição do desafio**: Implementação do frontend do Linketinder com Angular e operações de cadastro de candidato, empresa, competência e vagas mapeados em endpoint e com comunicação com a model para persistência dos dados.
 
-**Observações pessoais**: O desafio dessa trilha exigiu a Grande Refatoração do Frontend que teve que ser feita (quase) do zero. Eu achei que gostaria mais de mexer com frontend do que em backend mas centralizar uma caixa div no meio da tela se provou uma tarefa absurdamente difícil e frustrante, mas pelo menos agora a caixa está no meio (vertical) da tela e não mais no cantinho. Em contraste com o frontend anterior em TS/JS puro, no qual toda a lógica estava contida em uma só classe, o frontend atual está dividido em módulos e utiliza o modelo de programação orientada a objetos, além de utilizar o conceito de routing.
+**Observações pessoais**: O desafio dessa trilha exigiu a Grande Refatoração do Frontend que teve que ser feita (quase) do zero. Eu achei que gostaria mais de mexer com frontend do que em backend porém centralizar uma caixa div no meio da tela se provou uma tarefa absurdamente difícil e frustrante - pelo menos agora a caixa está no meio (vertical) da tela e não mais no cantinho. Em contraste com o frontend anterior em TS/JS puro, no qual toda a lógica estava contida em uma só classe, o frontend atual está dividido em módulos e utiliza o modelo de programação orientada a objetos, além de utilizar o conceito de routing.
 
 As rotas implementadas e seus componentes são:
 - /candidato, CandidatoComponent
@@ -76,7 +76,7 @@ Indo para o backend, inseri a modelagem da tabela CandidatoCompetencia de acordo
 
 Mapeei os endpoints de listagem de competências, candidatos e vagas, porém tenho a consciência que não fazem muito sentido dentro do microserviço de *cadastro*, então planejo criar vários microserviçoes de CRUD para não ferir o princípio de responsabilidade única. 
 
-Os endpoints padrão do microserviço é o /cadastro, e os endpoints das requisições são:
+O endpoint padrão do microserviço é o /cadastro, e os endpoints das requisições são:
 - /candidato
 - /empresa
 - /candidato/competencia (inserção de competência relacionada a candidato na tabela candidato_competencia)
