@@ -17,8 +17,10 @@ import zgheroproject.linketinder.model.Competencia
 import zgheroproject.linketinder.model.Empresa
 import zgheroproject.linketinder.model.Vaga
 
+import javax.management.Query
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
+import javax.persistence.TypedQuery
 
 @RestController
 @CrossOrigin

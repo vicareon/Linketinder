@@ -19,4 +19,14 @@ class EmpresaRepository implements EmpresaDAO{
         entityManager.persist(empresa)
         return empresa
     }
+
+    @Override
+    List<Empresa> listarEmpresas(){
+        return entityManager.createQuery("SELECT e FROM Empresa e").getResultList()
+    }
+
+    @Override
+    List<Empresa> buscarEmpresa(String buscaCnpj) {
+        return entityManager.createQuery("SELECT e FROM Empresa e WHERE e.cnpj LIKE :buscaCnpj").setParameter("buscaCnpj", buscaCnpj).getResultList()
+    }
 }

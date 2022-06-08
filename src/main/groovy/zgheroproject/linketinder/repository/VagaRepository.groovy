@@ -1,6 +1,5 @@
 package zgheroproject.linketinder.repository
 
-
 import org.springframework.stereotype.Repository
 import org.springframework.transaction.annotation.Transactional
 import zgheroproject.linketinder.dao.VagaDAO

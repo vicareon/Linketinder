@@ -1,15 +1,15 @@
 package zgheroproject.linketinder.dao
 
 import zgheroproject.linketinder.model.Candidato
-import org.springframework.stereotype.Component
 
-@Component
 interface CandidatoDAO {
     //void listarCandidatos()
     Candidato inserirCandidato(Candidato candidato)
     List<Candidato> listarCandidatos()
-    /*void deletarCandidato(String buscaCpf)
-    void atualizarCandidato(String buscaCpf, int escolhaAtualizaCandidato, String dadoAtualizado)
+    void excluirCandidato(String buscaCpf)
+    List<Candidato> buscarCandidato(String buscaCpf)
+
+    /*void atualizarCandidato(String buscaCpf, int escolhaAtualizaCandidato, String dadoAtualizado)
 
     void atualizarNome(String nome, String buscaCpf)
     void atualizarEmail(String email, String buscaCpf)

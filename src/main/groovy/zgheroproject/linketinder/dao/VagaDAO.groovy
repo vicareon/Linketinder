@@ -1,6 +1,5 @@
 package zgheroproject.linketinder.dao
 
-
 import zgheroproject.linketinder.model.Vaga
 
 interface VagaDAO {

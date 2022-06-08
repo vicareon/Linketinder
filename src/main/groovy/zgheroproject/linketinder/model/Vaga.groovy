@@ -3,10 +3,7 @@ package zgheroproject.linketinder.model
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.Id
-import javax.persistence.OneToMany
 import javax.persistence.Table
-import java.sql.Array
-import org.hibernate.mapping.Array
 
 @Entity
 @Table(name = "vagas")

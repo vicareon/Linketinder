@@ -1,11 +1,12 @@
 package zgheroproject.linketinder.dao
 
-
 import zgheroproject.linketinder.model.Empresa
 
 interface EmpresaDAO {
     //void listarEmpresas()
     Empresa inserirEmpresa(Empresa empresa)
+    List<Empresa> listarEmpresas()
+    List<Empresa> buscarEmpresa(String buscaCnpj)
     /*void deletarEmpresa(String cnpj)
     void atualizarEmpresa(String buscaCnpj, int escolhaAtualizarEmpresa, String dadoAtualizado)
 

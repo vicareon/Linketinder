@@ -19,4 +19,14 @@ class CandidatoCompetenciaRepository implements CandidatoCompetenciaDAO{
         entityManager.persist(candidatoCompetencia)
         return candidatoCompetencia
     }
+
+    @Override
+    List<CandidatoCompetencia> listarCompetenciasCandidatos(){
+        return entityManager.createQuery("SELECT c FROM CandidatoCompetencia c").getResultList()
+    }
+
+    @Override
+    List<CandidatoCompetencia> buscarCandidatoCompetencia(String buscaCpf, String nomeBuscaCompetencia) {
+        return entityManager.createQuery("SELECT c FROM CandidatoCompetencia c WHERE c.cpf = 'buscaCpf' AND c.nome = 'nomeBuscaCompetencia'").setParameter('buscaCpf', buscaCpf, 'nomeBuscaCompetencia', nomeBuscaCompetencia).getResultList()
+    }
 }
