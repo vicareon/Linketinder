@@ -24,9 +24,14 @@ dependencies {
     testImplementation("org.testcontainers:spock")
     testImplementation("org.testcontainers:testcontainers")
     implementation("io.micronaut:micronaut-validation")
+    implementation('jakarta.persistence:jakarta.persistence-api:3.1.0')
+    implementation 'io.micronaut.data:micronaut-data-model:3.4.2'
+    implementation 'org.postgresql:postgresql:42.4.0'
+    implementation 'io.micronaut.configuration:micronaut-hibernate-jpa:2.2.6'
+    //implementation 'io.micronaut.configuration:micronaut-jdbc-hikari:2.2.6'
 
+    //implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.7.0'
 }
-
 
 application {
     mainClass.set("acelerazg.linketinder.Application")

@@ -1,13 +1,15 @@
-package zgheroproject.linketinder.model
+package acelerazg.linketinder
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import io.micronaut.core.annotation.Introspected
+import jakarta.persistence.Entity
+import jakarta.persistence.Id
+import jakarta.persistence.Table
+import jakarta.persistence.Column
 
 @Entity
 @Table(name = "vagas")
-class Vaga implements Serializable{
+@Introspected
+class Vaga{
     @Id
     long id_vgs
 
@@ -21,7 +23,7 @@ class Vaga implements Serializable{
     private String descricao
 
     @Column(name = "empresa_vgs")
-    private String cnpjEmpresa
+    private String cnpj
 
     @Column(name = "competencias_vgs")
     private ArrayList listaCompetencias
@@ -70,7 +72,7 @@ class Vaga implements Serializable{
         this.cnpjEmpresa = cnpjEmpresa
     }
 
-    ArrayList<Competencia> getListaCompetencias() {
+    ArrayList getListaCompetencias() {
         return listaCompetencias
     }
 

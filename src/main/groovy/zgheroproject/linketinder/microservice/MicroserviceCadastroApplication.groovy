@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController
 import zgheroproject.linketinder.model.CandidatoCompetencia
 import zgheroproject.linketinder.model.Competencia
 import zgheroproject.linketinder.model.Empresa
-import zgheroproject.linketinder.model.Vaga
 
 import javax.persistence.EntityManager
 import javax.persistence.PersistenceContext
@@ -49,13 +48,13 @@ class MicroserviceCadastroApplication {
         return empresa
     }
 
-    @Transactional
+    /*@Transactional
     @RequestMapping(value = "/empresa/vaga", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     Vaga inserirVaga(@RequestBody Vaga vaga) {
         entityManager.persist(vaga)
         return vaga
-    }
+    }*/
 
     @Transactional
     @RequestMapping(value = "/candidato/competencia", method = RequestMethod.POST)
@@ -85,12 +84,5 @@ class MicroserviceCadastroApplication {
     @ResponseStatus(HttpStatus.OK)
     List<Candidato> listarCandidatos() {
         return entityManager.createQuery("SELECT c FROM Candidato c").getResultList()
-    }
-
-    @Transactional
-    @RequestMapping(value = "/lista/vagas", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
-    List<Vaga> listarVagas() {
-        return entityManager.createQuery("SELECT v FROM Vaga v").getResultList()
     }
 }

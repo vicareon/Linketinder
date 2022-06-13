@@ -3,7 +3,18 @@ micronaut:
     name: micronautmicroservice
 datasources:
   default:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5432/linketinder
     driverClassName: org.postgresql.Driver
     username: postgres
-    password: ''
+    password: '123'
+jpa:
+  default:
+    properties:
+      entity-scan:
+        classpath: true
+        packages:
+          - 'acelerazg.linketinder'
+      hibernate:
+        hbm2ddl:
+          auto: update
+        show_sql: true

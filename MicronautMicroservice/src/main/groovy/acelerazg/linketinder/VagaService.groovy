@@ -1,11 +1,9 @@
-package zgheroproject.linketinder.service
+/*package acelerazg.linketinder
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
-import zgheroproject.linketinder.repository.VagaRepository
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
-import zgheroproject.linketinder.model.Vaga
 
 @Service
 @ComponentScan(basePackages = "zgheroproject.linketinder.repository")
@@ -25,4 +23,4 @@ class VagaService {
     List<Vaga[]> listarVagas(){
         return vagaRepository.listarVagas()
     }
-}
+}*/
