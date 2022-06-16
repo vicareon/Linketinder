@@ -1,10 +1,15 @@
 package zgheroproject.linketinder.model
 
+import lombok.Data
+
 import javax.persistence.*
 
 @Entity
+@Data
 @Table(name = "candidatos")
 class Candidato{
+    //colocar em ordem
+
     @Id
     @Column(name = "cpf_cnd")
     private String cpf
@@ -51,85 +56,5 @@ class Candidato{
 
     Candidato() {
 
-    }
-
-    String getNome() {
-        return nome
-    }
-
-    void setNome(String nome) {
-        this.nome = nome
-    }
-
-    String getEmail() {
-        return email
-    }
-
-    void setEmail(String email) {
-        this.email = email
-    }
-
-    String getCep() {
-        return cep
-    }
-
-    void setCep(String cep) {
-        this.cep = cep
-    }
-
-    String getEstado() {
-        return estado
-    }
-
-    void setEstado(String estado) {
-        this.estado = estado
-    }
-
-    String getPais() {
-        return pais
-    }
-
-    void setPais(String pais) {
-        this.pais = pais
-    }
-
-    String getDescricao() {
-        return descricao
-    }
-
-    void setDescricao(String descricao) {
-        this.descricao = descricao
-    }
-
-    String getSenha() {
-        return senha
-    }
-
-    void setSenha(String senha) {
-        this.senha = senha
-    }
-
-    String getCpf() {
-        return cpf
-    }
-
-    void setCpf(String cpf) {
-        this.cpf = cpf
-    }
-
-    String getFormacaoAcademica() {
-        return formacaoAcademica
-    }
-
-    void setFormacaoAcademica(String formacaoAcademica) {
-        this.formacaoAcademica = formacaoAcademica
-    }
-
-    String getIdade() {
-        return idade
-    }
-
-    void setIdade(String idade) {
-        this.idade = idade
     }
 }

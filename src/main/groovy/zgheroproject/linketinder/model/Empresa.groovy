@@ -1,13 +1,21 @@
 package zgheroproject.linketinder.model
 
+import lombok.Data
+
 import javax.persistence.Column
 import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
 import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
+@Data
 @Table(name = "empresas")
 class Empresa{
+    //criar nova tabela
+    //colocar em ordem
+    e
     @Id
     @Column(name = "cnpj_emp")
     private String cnpj
@@ -46,69 +54,5 @@ class Empresa{
 
     Empresa() {
 
-    }
-
-    String getNome() {
-        return nome
-    }
-
-    void setNome(String nome) {
-        this.nome = nome
-    }
-
-    String getEmail() {
-        return email
-    }
-
-    void setEmail(String email) {
-        this.email = email
-    }
-
-    String getCep() {
-        return cep
-    }
-
-    void setCep(String cep) {
-        this.cep = cep
-    }
-
-    String getEstado() {
-        return estado
-    }
-
-    void setEstado(String estado) {
-        this.estado = estado
-    }
-
-    String getPais() {
-        return pais
-    }
-
-    void setPais(String pais) {
-        this.pais = pais
-    }
-
-    String getDescricao() {
-        return descricao
-    }
-
-    void setDescricao(String descricao) {
-        this.descricao = descricao
-    }
-
-    String getSenha() {
-        return senha
-    }
-
-    void setSenha(String senha) {
-        this.senha = senha
-    }
-
-    String getCnpj() {
-        return cnpj
-    }
-
-    void setCnpj(String cnpj) {
-        this.cnpj = cnpj
     }
 }

@@ -13,16 +13,15 @@ class EmpresaService {
     @Autowired
     private EmpresaRepository empresaRepository
 
-    @Bean
-    EmpresaService initEmpresaService(){
-        return new EmpresaService()
+    void salvarEmpresa(Empresa empresa){
+        empresaRepository.save(empresa)
     }
 
-    Empresa inserirEmpresa(Empresa empresa){
-        return empresaRepository.inserirEmpresa(empresa)
+    List<Empresa> listarEmpresas(){
+        return empresaRepository.findAll()
     }
 
-    List<Empresa> buscarEmpresa(String buscaCnpj){
-        return empresaRepository.buscarEmpresa(buscaCnpj)
+    void excluirEmpresa(String cnpj){
+        empresaRepository.deleteById(cnpj)
     }
 }

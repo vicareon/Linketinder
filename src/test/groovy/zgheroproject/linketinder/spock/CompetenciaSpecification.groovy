@@ -4,8 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.context.annotation.ComponentScan
 import spock.lang.Specification
-import zgheroproject.linketinder.controller.CompetenciaController
-import zgheroproject.linketinder.model.Competencia
 
 @SpringBootTest
 @ComponentScan(basePackages = "zgheroproject.linketinder.*")
