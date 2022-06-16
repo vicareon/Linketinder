@@ -21,7 +21,6 @@ class EmpresaController{
     @Autowired
     EmpresaService empresaService
 
-    //salvar
     @Transactional
     @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
@@ -29,7 +28,6 @@ class EmpresaController{
         empresaService.salvarEmpresa(empresa)
     }
 
-    //listar
     @Transactional
     @RequestMapping(value = "/lista", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
@@ -41,7 +39,7 @@ class EmpresaController{
 
     //excluir
     @Transactional
-    @RequestMapping(value = "/excluir", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/excluir", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     void excluirEmpresa(@RequestBody String cnpj){
         empresaService.excluirEmpresa(cnpj)

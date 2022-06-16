@@ -21,7 +21,6 @@ class CandidatoController{
     @Autowired
     CandidatoService candidatoService
 
-    //salvar
     @Transactional
     @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
@@ -29,7 +28,6 @@ class CandidatoController{
         candidatoService.salvarCandidato(candidato)
     }
 
-    //listar
     @Transactional
     @RequestMapping(value = "/lista", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
@@ -41,7 +39,7 @@ class CandidatoController{
 
     //excluir
     @Transactional
-    @RequestMapping(value = "/excluir", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/excluir", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
     void excluirCandidato(@RequestBody String cpf){
         candidatoService.excluirCandidato(cpf)
