@@ -23,4 +23,32 @@ class EmpresaService {
     void excluirEmpresa(String cnpj){
         empresaRepository.deleteById(cnpj)
     }
+
+    void atualizarNome(String cnpj, String nome){
+        empresaRepository.atualizarNome(cnpj, nome)
+    }
+
+    void atualizarEmail(String cnpj, String email){
+        empresaRepository.atualizarEmail(cnpj, email)
+    }
+
+    void atualizarCep(String cnpj, String cep){
+        empresaRepository.atualizarCep(cnpj, cep)
+    }
+
+    void atualizarEstado(String cnpj, String estado){
+        empresaRepository.atualizarEstado(cnpj, estado)
+    }
+
+    void atualizarPais(String cnpj, String pais){
+        empresaRepository.atualizarPais(cnpj, pais)
+    }
+
+    void atualizarDescricao(String cnpj, String descricao){
+        empresaRepository.atualizarDescricao(cnpj, descricao)
+    }
+
+    void atualizarSenha(String cnpj, String senha){
+        empresaRepository.atualizarSenha(cnpj, senha)
+    }
 }

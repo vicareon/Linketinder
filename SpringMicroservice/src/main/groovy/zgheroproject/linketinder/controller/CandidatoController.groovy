@@ -36,7 +36,6 @@ class CandidatoController{
         return candidatoService.listarCandidatos()
     }
 
-    //atualizar
     @Transactional
     @RequestMapping(value = "/atualizar/nome/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
