@@ -27,4 +27,28 @@ class VagaCompetencia {
     VagaCompetencia() {
 
     }
+
+    int getId() {
+        return id
+    }
+
+    void setId(int id) {
+        this.id = id
+    }
+
+    int getId_vaga() {
+        return id_vaga
+    }
+
+    void setId_vaga(int id_vaga) {
+        this.id_vaga = id_vaga
+    }
+
+    String getCompetencia() {
+        return competencia
+    }
+
+    void setCompetencia(String competencia) {
+        this.competencia = competencia
+    }
 }

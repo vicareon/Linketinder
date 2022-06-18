@@ -2,6 +2,7 @@ package zgheroproject.linketinder.controller
 
 import jakarta.inject.Inject
 import org.springframework.http.HttpStatus
+import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.ResponseStatus
@@ -26,9 +27,9 @@ class VagaCompetenciaController {
         return vagaCompetenciaService.listarTodasVagasCompetencias()
     }
 
-    @RequestMapping(value = "/excluir/{$id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/excluir/{id}", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)
-    void excluirVagaCompetencia(int id){
+    void excluirVagaCompetencia(@PathVariable("id") int id){
         vagaCompetenciaService.excluirVagaCompetencia(id)
     }
 }

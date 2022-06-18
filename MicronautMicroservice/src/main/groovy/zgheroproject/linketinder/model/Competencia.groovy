@@ -8,10 +8,10 @@ import jakarta.persistence.Table
 @Entity
 @Table(name="competencias")
 class Competencia {
+    @Id
     @Column(name="id")
     public int id
 
-    @Id
     @Column(name="nome")
     public String nome
 
@@ -22,5 +22,21 @@ class Competencia {
 
     Competencia() {
 
+    }
+
+    String getNome() {
+        return nome
+    }
+
+    void setNome(String nome) {
+        this.nome = nome
+    }
+
+    int getId() {
+        return id
+    }
+
+    void setId(int id) {
+        this.id = id
     }
 }
