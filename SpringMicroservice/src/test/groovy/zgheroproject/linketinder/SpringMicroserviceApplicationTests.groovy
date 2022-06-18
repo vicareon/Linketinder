@@ -1,10 +1,10 @@
-package zgheroproject.linketinder.testespring
+package zgheroproject.linketinder
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class TesteSpringApplicationTests {
+class SpringMicroserviceApplicationTests {
 
     @Test
     void contextLoads() {
