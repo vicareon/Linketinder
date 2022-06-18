@@ -40,63 +40,63 @@ class CandidatoController{
     @Transactional
     @RequestMapping(value = "/atualizar/nome/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarNome(@PathVariable("cpf") String cpf, String nome){
+    void atualizarNome(@PathVariable("cpf") String cpf, @RequestBody String nome){
         candidatoService.atualizarNome(cpf, nome)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/email/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarEmail(@PathVariable("cpf") String cpf, String email){
+    void atualizarEmail(@PathVariable("cpf") String cpf, @RequestBody String email){
         candidatoService.atualizarEmail(cpf, email)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/cep/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarCep(@PathVariable("cpf") String cpf, String cep){
+    void atualizarCep(@PathVariable("cpf") String cpf, @RequestBody String cep){
         candidatoService.atualizarCep(cpf, cep)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/estado/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarEstado(@PathVariable("cpf") String cpf, String estado){
+    void atualizarEstado(@PathVariable("cpf") String cpf, @RequestBody String estado){
         candidatoService.atualizarEstado(cpf, estado)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/pais/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarPais(@PathVariable("cpf") String cpf, String pais){
+    void atualizarPais(@PathVariable("cpf") String cpf, @RequestBody String pais){
         candidatoService.atualizarPais(cpf, pais)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/descricao/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarDescricao(@PathVariable("cpf") String cpf, String descricao){
+    void atualizarDescricao(@PathVariable("cpf") String cpf, @RequestBody String descricao){
         candidatoService.atualizarDescricao(cpf, descricao)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/formacao/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarFormacao(@PathVariable("cpf") String cpf, String formacao){
+    void atualizarFormacao(@PathVariable("cpf") String cpf, @RequestBody String formacao){
         candidatoService.atualizarFormacao(cpf, formacao)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/idade/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarIdade(@PathVariable("cpf") String cpf, String idade){
+    void atualizarIdade(@PathVariable("cpf") String cpf, @RequestBody String idade){
         candidatoService.atualizarIdade(cpf, idade)
     }
 
     @Transactional
     @RequestMapping(value = "/atualizar/senha/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
-    void atualizarSenha(@PathVariable("cpf") String cpf, String senha){
+    void atualizarSenha(@PathVariable("cpf") String cpf, @RequestBody String senha){
         candidatoService.atualizarSenha(cpf, senha)
     }
 

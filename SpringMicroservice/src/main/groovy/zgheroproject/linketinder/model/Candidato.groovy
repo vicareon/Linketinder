@@ -57,4 +57,92 @@ class Candidato{
 
     Candidato() {
     }
+
+    int getId() {
+        return id
+    }
+
+    void setId(int id) {
+        this.id = id
+    }
+
+    String getNome() {
+        return nome
+    }
+
+    void setNome(String nome) {
+        this.nome = nome
+    }
+
+    String getEmail() {
+        return email
+    }
+
+    void setEmail(String email) {
+        this.email = email
+    }
+
+    String getCep() {
+        return cep
+    }
+
+    void setCep(String cep) {
+        this.cep = cep
+    }
+
+    String getEstado() {
+        return estado
+    }
+
+    void setEstado(String estado) {
+        this.estado = estado
+    }
+
+    String getPais() {
+        return pais
+    }
+
+    void setPais(String pais) {
+        this.pais = pais
+    }
+
+    String getDescricao() {
+        return descricao
+    }
+
+    void setDescricao(String descricao) {
+        this.descricao = descricao
+    }
+
+    String getCpf() {
+        return cpf
+    }
+
+    void setCpf(String cpf) {
+        this.cpf = cpf
+    }
+
+    String getFormacao() {
+        return formacao
+    }
+
+    void setFormacao(String formacao) {
+        this.formacao = formacao
+    }
+
+    String getIdade() {
+        return idade
+    }
+
+    void setIdade(String idade) {
+        this.idade = idade
+    }
+
+    String getSenha() {
+        return senha
+    }
+
+    void setSenha(String senha) {
+        this.senha = senha
+    }
 }

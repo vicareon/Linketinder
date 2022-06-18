@@ -4,6 +4,7 @@ import org.springframework.context.annotation.ComponentScan
 import zgheroproject.linketinder.model.Candidato
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
+
 import zgheroproject.linketinder.repository.CandidatoRepository
 
 @Service
