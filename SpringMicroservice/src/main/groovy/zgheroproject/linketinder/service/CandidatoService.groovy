@@ -23,4 +23,32 @@ class CandidatoService{
     void excluirCandidato(String cpf){
         candidatoRepository.deleteById(cpf)
     }
+
+    void atualizarNome(String cpf, String nome){
+        candidatoRepository.atualizarNome(cpf, nome)
+    }
+    void atualizarEmail(String cpf, String email){
+        candidatoRepository.atualizarEmail(cpf, email)
+    }
+    void atualizarCep(String cpf, String cep){
+        candidatoRepository.atualizarCep(cpf, cep)
+    }
+    void atualizarEstado(String cpf, String estado){
+        candidatoRepository.atualizarEstado(cpf, estado)
+    }
+    void atualizarPais(String cpf, String pais){
+        candidatoRepository.atualizarPais(cpf, pais)
+    }
+    void atualizarDescricao(String cpf, String descricao){
+        candidatoRepository.atualizarDescricao(cpf, descricao)
+    }
+    void atualizarFormacao(String cpf, String formacao){
+        candidatoRepository.atualizarFormacao(cpf, formacao)
+    }
+    void atualizarIdade(String cpf, String idade){
+        candidatoRepository.atualizarIdade(cpf, idade)
+    }
+    void atualizarSenha(String cpf, String senha){
+        candidatoRepository.atualizarSenha(cpf, senha)
+    }
 }

@@ -38,7 +38,7 @@ class EmpresaController{
     //atualizar
 
     @Transactional
-    @RequestMapping(value = "/excluir", method = RequestMethod.POST)
+    @RequestMapping(value = "/excluir", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.OK)
     void excluirEmpresa(@RequestBody String cnpj){
         empresaService.excluirEmpresa(cnpj)
