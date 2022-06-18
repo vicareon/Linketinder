@@ -37,7 +37,6 @@ class CandidatoController{
 
     //atualizar
 
-    //excluir
     @Transactional
     @RequestMapping(value = "/excluir", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.OK)

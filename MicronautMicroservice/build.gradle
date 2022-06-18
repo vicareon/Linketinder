@@ -36,6 +36,7 @@ dependencies {
     testCompileOnly("io.micronaut.spring:micronaut-spring-annotation")
     testCompileOnly("io.micronaut.spring:micronaut-spring-boot-annotation")
     implementation("io.micronaut:micronaut-validation")
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
 
 }
 
