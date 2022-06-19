@@ -12,11 +12,21 @@
       <p><input type="text" name="cpf" placeholder="CPF" [(ngModel)]="cpf"></p>
       <p><input type="text" name="formacaoAcademica" placeholder="Formação Acadêmica" [(ngModel)]="formacaoAcademica"></p>
       <p><input type="text" name="descricao" placeholder="Descrição" [(ngModel)]="descricao"></p>
+
+      //lista de competências aqui
+      <div *ngFor="let c of listaCompetencias; let i=index">
+        <label>
+          <input type="checkbox" [value]="c.value">
+          {{c.nome}}
+        </label>
+      </div>
+      <p><input type="text" name="nomeCompetencia" placeholder="Competência" [(ngModel)]="nome"></p>
+
       <p><input type="text" name="senha" placeholder="Senha" [(ngModel)]="senha"></p>
     </div>
   </form>
   <nav>
-    <button class="button" type="submit" routerLink="/candidato/cadastro/competencia" (click)="onSubmit()">Salvar</button>
+    <button class="button" type="submit" routerLink="/candidato" (click)="onSubmit()">Salvar</button>
   </nav>
 </div>
 </body>

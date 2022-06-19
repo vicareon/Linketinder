@@ -6,14 +6,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CandidatoComponent } from './pessoaFisica/candidato/candidato.component';
-import { EmpresaComponent } from './pessoaJuridica/empresa/empresa.component';
-import { CadastroCandidatoComponent } from './pessoaFisica/cadastro-candidato/cadastro-candidato.component';
-import { CadastroEmpresaComponent } from './pessoaJuridica/cadastro-empresa/cadastro-empresa.component';
-import { CadastroVagaComponent } from './pessoaJuridica/cadastro-vaga/cadastro-vaga.component';
-import { CadastroCompetenciaComponent } from './pessoaFisica/cadastro-competencia/cadastro-competencia.component';
-import { ListaVagasComponent } from './pessoaFisica/lista-vagas/lista-vagas.component';
-import { ListaCandidatosComponent } from './pessoaJuridica/lista-candidatos/lista-candidatos.component';
+import { CandidatoComponent } from './candidato/candidatoIndex/candidatoIndex.component';
+import { EmpresaComponent } from './empresa/empresaIndex/empresaIndex.component';
+import { CadastroCandidatoComponent } from './candidato/cadastroCandidato/cadastroCandidato.component';
+import { CadastroEmpresaComponent } from './empresa/cadastroEmpresa/cadastroEmpresa.component';
+import { CadastroVagaComponent } from './empresa/cadastroVaga/cadastroVaga.component';
+import { ListaVagasComponent } from './candidato/listaVagas/listaVagas.component';
+import { ListaCandidatosComponent } from './empresa/listaCandidatos/listaCandidatos.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { IndexComponent } from './index/index.component';
 
@@ -25,7 +24,6 @@ import { IndexComponent } from './index/index.component';
     CadastroCandidatoComponent,
     CadastroEmpresaComponent,
     CadastroVagaComponent,
-    CadastroCompetenciaComponent,
     ListaVagasComponent,
     ListaCandidatosComponent,
     IndexComponent
@@ -37,7 +35,6 @@ import { IndexComponent } from './index/index.component';
                 {path: 'empresa', component: EmpresaComponent},
                 {path: 'candidato/cadastro', component: CadastroCandidatoComponent},
                 {path: 'empresa/cadastro', component: CadastroEmpresaComponent},
-                {path: 'candidato/cadastro/competencia', component: CadastroCompetenciaComponent},
                 {path: 'empresa/cadastro/vaga', component: CadastroVagaComponent},
                 {path: 'candidato/vagas', component: ListaVagasComponent},
                 {path: 'empresa/candidatos', component: ListaCandidatosComponent},

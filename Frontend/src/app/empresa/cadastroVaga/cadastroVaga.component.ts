@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Competencia} from "../../pessoaFisica/cadastro-competencia/competencia";
+import {Competencia} from "../../candidato/cadastroCandidato/competencia";
 import {newArray} from "@angular/compiler/src/util";
 
 @Component({
   selector: 'app-cadastro-vaga',
-  templateUrl: './cadastro-vaga.component.html',
+  templateUrl: './cadastroVaga.component.html',
   styleUrls: ['../../index/index.component.css']
 })
 export class CadastroVagaComponent implements OnInit {

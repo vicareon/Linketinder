@@ -1,4 +1,4 @@
-import {Competencia} from "../../pessoaFisica/cadastro-competencia/competencia";
+import {Competencia} from "../../candidato/cadastroCandidato/competencia";
 
 export class Vaga {
   nome: string;
