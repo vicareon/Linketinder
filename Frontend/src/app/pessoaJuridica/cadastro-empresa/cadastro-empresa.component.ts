@@ -5,7 +5,7 @@ import {Empresa} from "./empresa";
 @Component({
   selector: 'app-cadastro-empresa',
   templateUrl: './cadastro-empresa.component.html',
-  styleUrls: ['../index/index.component.css']
+  styleUrls: ['../../index/index.component.css']
 })
 export class CadastroEmpresaComponent implements OnInit {
   nome: any;
@@ -24,7 +24,7 @@ export class CadastroEmpresaComponent implements OnInit {
 
   onSubmit() {
     const empresa = new Empresa(this.nome, this.email, this.estado, this.pais, this.cep, this.cnpj, this.descricao, this.senha)
-    this.http.post('http://localhost:8080/cadastro/empresa', empresa).subscribe(
+    this.http.post('http://localhost:8081/empresa/cadastro', empresa).subscribe(
       resultado => {
         alert("Empresa cadastrada com sucesso!")
       }

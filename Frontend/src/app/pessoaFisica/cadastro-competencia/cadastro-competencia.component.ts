@@ -6,7 +6,7 @@ import {Competencia} from "./competencia";
 @Component({
   selector: 'app-cadastro-competencia',
   templateUrl: './cadastro-competencia.component.html',
-  styleUrls: ['../index/index.component.css']
+  styleUrls: ['../../index/index.component.css']
 })
 export class CadastroCompetenciaComponent implements OnInit {
   nome: any;
@@ -17,7 +17,7 @@ export class CadastroCompetenciaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.http.get('http://localhost:8080/cadastro/lista/competencia').subscribe((data: any)=> {
+    this.http.get('http://localhost:8082/competencia/lista').subscribe((data: any)=> {
       data.forEach((element: { nome: any; }) => {
         this.listaCompetencias.push(element)
       });
@@ -26,14 +26,14 @@ export class CadastroCompetenciaComponent implements OnInit {
 
   onSubmit() {
     const competencia = new Competencia(this.nome)
-    this.http.post('http://localhost:8080/cadastro/candidato/cria-competencia', competencia).subscribe(
+    this.http.post('http://localhost:8082/competencia/cadastro', competencia).subscribe(
       resultado => {
         alert("Competência cadastrada com sucesso!")
       }
     )
 
     const candidatoCompetencia = new CandidatoCompetencia(this.cpf, this.nome)
-    this.http.post('http://localhost:8080/cadastro/candidato/competencia', candidatoCompetencia).subscribe(
+    this.http.post('http://localhost:8082/competencia/candidato/cadastro', candidatoCompetencia).subscribe(
       resultado => {
         alert("Competência do candidato cadastrada com sucesso!")
       }

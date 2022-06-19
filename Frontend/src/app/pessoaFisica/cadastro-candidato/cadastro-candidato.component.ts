@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-cadastro-candidato',
   templateUrl: './cadastro-candidato.component.html',
-  styleUrls: ['../index/index.component.css']
+  styleUrls: ['../../index/index.component.css']
 })
 
 export class CadastroCandidatoComponent implements OnInit {
@@ -28,7 +28,7 @@ export class CadastroCandidatoComponent implements OnInit {
   onSubmit() {
     const candidato = new Candidato(this.nome, this.email, this.estado, this.pais, this.cep, this.idade, this.cpf, this.formacaoAcademica, this.descricao, this.senha)
     console.log(candidato.nome)
-    this.http.post('http://localhost:8080/cadastro/candidato', candidato).subscribe(
+    this.http.post('http://localhost:8081/candidato/cadastro', candidato).subscribe(
       resultado => {
         alert("Candidato cadastrado com sucesso!")
       }

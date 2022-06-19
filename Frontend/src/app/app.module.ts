@@ -6,14 +6,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CandidatoComponent } from './candidato/candidato.component';
-import { EmpresaComponent } from './empresa/empresa.component';
-import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
-import { CadastroEmpresaComponent } from './cadastro-empresa/cadastro-empresa.component';
-import { CadastroVagaComponent } from './cadastro-vaga/cadastro-vaga.component';
-import { CadastroCompetenciaComponent } from './cadastro-competencia/cadastro-competencia.component';
-import { ListaVagasComponent } from './lista-vagas/lista-vagas.component';
-import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.component';
+import { CandidatoComponent } from './pessoaFisica/candidato/candidato.component';
+import { EmpresaComponent } from './pessoaJuridica/empresa/empresa.component';
+import { CadastroCandidatoComponent } from './pessoaFisica/cadastro-candidato/cadastro-candidato.component';
+import { CadastroEmpresaComponent } from './pessoaJuridica/cadastro-empresa/cadastro-empresa.component';
+import { CadastroVagaComponent } from './pessoaJuridica/cadastro-vaga/cadastro-vaga.component';
+import { CadastroCompetenciaComponent } from './pessoaFisica/cadastro-competencia/cadastro-competencia.component';
+import { ListaVagasComponent } from './pessoaFisica/lista-vagas/lista-vagas.component';
+import { ListaCandidatosComponent } from './pessoaJuridica/lista-candidatos/lista-candidatos.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { IndexComponent } from './index/index.component';
 
