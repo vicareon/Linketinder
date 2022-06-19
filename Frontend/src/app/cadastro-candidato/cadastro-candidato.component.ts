@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-cadastro-candidato',
   templateUrl: './cadastro-candidato.component.html',
-  styleUrls: ['./cadastro-candidato.component.css']
+  styleUrls: ['../index/index.component.css']
 })
 
 export class CadastroCandidatoComponent implements OnInit {

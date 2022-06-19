@@ -4,7 +4,7 @@ import {HttpClient} from "@angular/common/http";
 @Component({
   selector: 'app-lista-candidatos',
   templateUrl: './lista-candidatos.component.html',
-  styleUrls: ['./lista-candidatos.component.css']
+  styleUrls: ['../index/index.component.css']
 })
 export class ListaCandidatosComponent implements OnInit {
   listaCandidatos: any[] = []

@@ -5,7 +5,7 @@ import {Empresa} from "./empresa";
 @Component({
   selector: 'app-cadastro-empresa',
   templateUrl: './cadastro-empresa.component.html',
-  styleUrls: ['./cadastro-empresa.component.css']
+  styleUrls: ['../index/index.component.css']
 })
 export class CadastroEmpresaComponent implements OnInit {
   nome: any;

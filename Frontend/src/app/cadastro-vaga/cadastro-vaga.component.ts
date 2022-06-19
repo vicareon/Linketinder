@@ -5,7 +5,7 @@ import {newArray} from "@angular/compiler/src/util";
 @Component({
   selector: 'app-cadastro-vaga',
   templateUrl: './cadastro-vaga.component.html',
-  styleUrls: ['./cadastro-vaga.component.css']
+  styleUrls: ['../index/index.component.css']
 })
 export class CadastroVagaComponent implements OnInit {
   nome: any;

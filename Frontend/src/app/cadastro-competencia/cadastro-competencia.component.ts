@@ -6,7 +6,7 @@ import {Competencia} from "./competencia";
 @Component({
   selector: 'app-cadastro-competencia',
   templateUrl: './cadastro-competencia.component.html',
-  styleUrls: ['./cadastro-competencia.component.css']
+  styleUrls: ['../index/index.component.css']
 })
 export class CadastroCompetenciaComponent implements OnInit {
   nome: any;
