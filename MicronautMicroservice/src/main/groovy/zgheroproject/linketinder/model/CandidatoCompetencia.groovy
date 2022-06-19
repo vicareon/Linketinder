@@ -8,27 +8,26 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Table(name="vagas_competencias")
-class VagaCompetencia {
+@Table(name = "candidatos_competencias")
+class CandidatoCompetencia {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy=GenerationType.AUTO)
     @Column(name="id")
     public int id
 
-    @Column(name="id_vaga")
-    public int id_vaga
+    @Column(name="cpf")
+    public String cpf
 
     @Column(name="competencia")
     public String competencia
 
-    VagaCompetencia(int id, int id_vaga, String competencia) {
+    CandidatoCompetencia(int id, String cpf, String competencia) {
         this.id = id
-        this.id_vaga = id_vaga
+        this.cpf = cpf
         this.competencia = competencia
     }
 
-    VagaCompetencia() {
-
+    CandidatoCompetencia() {
     }
 
     int getId() {
@@ -39,12 +38,12 @@ class VagaCompetencia {
         this.id = id
     }
 
-    int getId_vaga() {
-        return id_vaga
+    String getCpf() {
+        return cpf
     }
 
-    void setId_vaga(int id_vaga) {
-        this.id_vaga = id_vaga
+    void setCpf(String cpf) {
+        this.cpf = cpf
     }
 
     String getCompetencia() {

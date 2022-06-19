@@ -1,35 +1,33 @@
 package zgheroproject.linketinder.controller
 
-import jakarta.inject.Inject
-import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
-import zgheroproject.linketinder.model.Competencia
-import zgheroproject.linketinder.service.CompetenciaService
 
-@RestController("/competencia")
+import io.micronaut.http.annotation.Controller
+import io.micronaut.http.annotation.Delete
+import io.micronaut.http.annotation.Get
+import io.micronaut.http.annotation.PathVariable
+import io.micronaut.http.annotation.Post
+import zgheroproject.linketinder.model.Competencia
+import zgheroproject.linketinder.repository.CompetenciaRepository
+
+import javax.inject.Inject
+
+@Controller("/competencia")
 class CompetenciaController {
     @Inject
-    private CompetenciaService competenciaService
+    private CompetenciaRepository competenciaRepository
 
-    @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
+    @Post("/cadastro")
     void salvarCompetencia(Competencia competencia){
-        competenciaService.salvarCompetencia(competencia)
+        competenciaRepository.save(competencia)
     }
 
-    @RequestMapping(value = "/lista", method = RequestMethod.GET)
-    @ResponseStatus(HttpStatus.OK)
+    @Get("/lista")
     List<Competencia> listarCompetencias(){
-        return competenciaService.listarCompetencias()
+        return competenciaRepository.findAll()
     }
 
-    @RequestMapping(value = "/excluir/{nome}", method = RequestMethod.DELETE)
-    @ResponseStatus(HttpStatus.OK)
-    void excluirCompetencia(@PathVariable("nome") String nome){
-        competenciaService.excluirCompetencia(nome)
+    @Delete("/excluir/{id}")
+    void excluirCompetencia(@PathVariable("id") int id){
+        competenciaRepository.deleteById(id)
     }
 }

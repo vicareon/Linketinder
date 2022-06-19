@@ -3,18 +3,12 @@ micronaut:
     name: micronautmicroservice
   server:
     port: 8082
-  session:
-    http:
-      cookie: true
-      header: true
 datasources:
   default:
     url: jdbc:postgresql://localhost:5432/linketindertestes
     driverClassName: org.postgresql.Driver
     username: postgres
     password: '123'
-    schema-generate: NONE
-    dialect: POSTGRES
 netty:
   default:
     allocator:

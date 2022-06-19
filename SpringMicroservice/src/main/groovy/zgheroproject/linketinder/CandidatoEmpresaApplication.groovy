@@ -4,10 +4,8 @@ import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 
 @SpringBootApplication
-class SpringMicroserviceApplication {
-
+class CandidatoEmpresaApplication {
     static void main(String[] args) {
-        SpringApplication.run(SpringMicroserviceApplication, args)
+        SpringApplication.run(CandidatoEmpresaApplication, args)
     }
-
 }

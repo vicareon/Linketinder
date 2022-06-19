@@ -1,35 +1,33 @@
 package zgheroproject.linketinder.controller
 
-import jakarta.inject.Inject
-import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RequestMethod
-import org.springframework.web.bind.annotation.ResponseStatus
-import org.springframework.web.bind.annotation.RestController
+import io.micronaut.http.annotation.Controller
+import io.micronaut.http.annotation.Delete
+import io.micronaut.http.annotation.Get
+import io.micronaut.http.annotation.PathVariable
+import io.micronaut.http.annotation.Post
 import zgheroproject.linketinder.model.VagaCompetencia
-import zgheroproject.linketinder.service.VagaCompetenciaService
+import zgheroproject.linketinder.repository.VagaCompetenciaRepository
 
-@RestController("/competencia/vaga")
+import javax.inject.Inject
+
+
+@Controller("/competencia/vaga")
 class VagaCompetenciaController {
     @Inject
-    private VagaCompetenciaService vagaCompetenciaService
+    private VagaCompetenciaRepository vagaCompetenciaRepository
 
-    @RequestMapping(value = "/cadastro", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.CREATED)
+    @Post("/cadastro")
     void salvarVagaCompetencia(VagaCompetencia vagaCompetencia){
-        vagaCompetenciaService.salvarVagaCompetencia(vagaCompetencia)
+        vagaCompetenciaRepository.save(vagaCompetencia)
     }
 
-    @RequestMapping(value = "/lista", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
+    @Get("/lista")
     List<VagaCompetencia> listarTodasVagasCompetencias(){
-        return vagaCompetenciaService.listarTodasVagasCompetencias()
+        return vagaCompetenciaRepository.findAll()
     }
 
-    @RequestMapping(value = "/excluir/{id}", method = RequestMethod.POST)
-    @ResponseStatus(HttpStatus.OK)
+    @Delete("/excluir/{id}")
     void excluirVagaCompetencia(@PathVariable("id") int id){
-        vagaCompetenciaService.excluirVagaCompetencia(id)
+        vagaCompetenciaRepository.deleteById(id)
     }
 }

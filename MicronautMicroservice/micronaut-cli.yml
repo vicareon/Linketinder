@@ -3,4 +3,4 @@ defaultPackage: zgheroproject.linketinder
 testFramework: spock
 sourceLanguage: groovy
 buildTool: gradle
-features: [ annotation-api, app-name, data, data-jdbc, gradle, groovy, groovy-application, http-client, http-session, jackson-databind, jdbc-hikari, logback, micronaut-build, netty-server, postgres, readme, shade, spock, spring, spring-boot, spring-data-jdbc, testcontainers, yaml ]
+features: [ annotation-api, app-name, gradle, groovy, groovy-application, http-client, jackson-databind, logback, micronaut-build, netty-server, readme, shade, spock, yaml ]
