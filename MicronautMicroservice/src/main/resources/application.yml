@@ -1,0 +1,15 @@
+micronaut:
+  application:
+    name: micronautmicroservice
+  server:
+    port: 8082
+datasources:
+  default:
+    url: jdbc:postgresql://localhost:5432/linketindertestes
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: '123'
+netty:
+  default:
+    allocator:
+      max-order: 3

@@ -1,0 +1,20 @@
+package grailsmicroservice
+
+import grails.rest.*
+
+@Resource(uri = '/vaga')
+class Vagas{
+    String nome, estado, descricao, empresa
+
+    static mapping = {
+        table 'vagas'
+        version false
+        nome column: 'nome'
+        estado column: 'estado'
+        descricao column: 'descricao'
+        empresa column: 'empresa'
+    }
+
+    static constraints = {
+    }
+}
