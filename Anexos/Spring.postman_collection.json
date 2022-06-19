@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "81e2d509-91ba-4999-8c06-69c17efcedf7",
+		"name": "Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21204668"
+	},
+	"item": [
+		{
+			"name": "Candidato",
+			"item": [
+				{
+					"name": "Atualizar",
+					"item": [
+						{
+							"name": "Nome",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/nome/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"nome",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/email/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"email",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CEP",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/cep/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"cep",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/estado/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"estado",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "País",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/pais/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"pais",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Descrição",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/descricao/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"descricao",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Formação",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/formacao/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"formacao",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Senha",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "senha"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/senha/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"senha",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Idade",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "99"
+								},
+								"url": {
+									"raw": "localhost:8081/candidato/atualizar/idade/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"candidato",
+										"atualizar",
+										"idade",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "postman",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/candidato/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"candidato",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"postman\",\n    \"email\":\"postman\",\n    \"cep\":\"postman\",\n    \"estado\":\"postman\",\n    \"pais\":\"postman\",\n    \"descricao\":\"postman\",\n    \"cpf\":\"postman\",\n    \"formacao\":\"postman\",\n    \"idade\":\"postman\",\n    \"senha\":\"postman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/candidato/cadastro",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"candidato",
+								"cadastro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "Atualizar",
+					"item": [
+						{
+							"name": "Nome",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/nome/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"nome",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Email",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/email/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"email",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CEP",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/cep/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"cep",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/estado/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"estado",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "País",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/pais/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"pais",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Descrição",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "postman atualizado"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/descricao/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"descricao",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Senha",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "senha"
+								},
+								"url": {
+									"raw": "localhost:8081/empresa/atualizar/senha/postman",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"empresa",
+										"atualizar",
+										"senha",
+										"postman"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "postman"
+						},
+						"url": {
+							"raw": "localhost:8081/empresa/excluir",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"empresa",
+								"excluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"postman\",\n    \"email\":\"postman\",\n    \"cep\":\"postman\",\n    \"estado\":\"postman\",\n    \"pais\":\"postman\",\n    \"descricao\":\"postman\",\n    \"cnpj\":\"postman\",\n    \"senha\":\"postman\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/empresa/cadastro",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"empresa",
+								"cadastro"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

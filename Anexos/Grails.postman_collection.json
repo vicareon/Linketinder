@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "31ab74e4-a579-40ef-8399-e748b7dc8c08",
+		"name": "Grails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21204668"
+	},
+	"item": [
+		{
+			"name": "Vaga",
+			"item": [
+				{
+					"name": "Atualizar",
+					"item": [
+						{
+							"name": "Nome",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\":\"postman atualizado\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/vaga/12",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vaga",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Estado",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"estado\":\"postman atualizado\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/vaga/12",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vaga",
+										"12"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Descrição",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"descricao\":\"postman atualizado\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/vaga/12",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"vaga",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Lista",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/vaga",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vaga"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "teste"
+						},
+						"url": {
+							"raw": "localhost:8080/vaga/11",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vaga",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Salvar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\":\"postman\",\n    \"estado\":\"postman\",\n    \"descricao\":\"postman\",\n    \"empresa\":\"teste\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/vaga",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"vaga"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
