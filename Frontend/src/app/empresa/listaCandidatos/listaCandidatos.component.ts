@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Candidato} from "../../candidato/cadastroCandidato/candidato";
 
 @Component({
   selector: 'app-lista-candidatos',
@@ -12,5 +13,10 @@ export class ListaCandidatosComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('localhost:8081/candidato/lista').subscribe((data: any)=> {
+      data.forEach((element: { nome: any; }) => {
+        this.listaCandidatos.push(element)
+      });
+    });
   }
 }

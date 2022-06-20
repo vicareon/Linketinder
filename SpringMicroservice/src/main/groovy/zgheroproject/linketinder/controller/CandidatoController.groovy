@@ -2,6 +2,7 @@ package zgheroproject.linketinder.controller
 
 import org.springframework.context.annotation.ComponentScan
 import org.springframework.http.HttpStatus
+import org.springframework.stereotype.Controller
 import org.springframework.transaction.annotation.Transactional
 import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.PathVariable
@@ -15,7 +16,6 @@ import zgheroproject.linketinder.service.CandidatoService
 import org.springframework.beans.factory.annotation.Autowired
 
 @RestController
-@CrossOrigin
 @RequestMapping(value = "/candidato")
 @ComponentScan(basePackages = "zgheroproject.linketinder.service")
 class CandidatoController{
