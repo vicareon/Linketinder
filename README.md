@@ -99,10 +99,68 @@ Utilizei o Postman para testagem das APIs. Segue uma lista de tutoriais e artigo
 **Data de entrega**: 03/06/22
 
 ## Trilha 3: Spock
-**Assunto**: Framework Spock
+**Assunto**: Testes unitários com Spock
 
 **Descrição do desafio**: Implementação de todos os testes unitários possíveis utilizando Spock.
 
-**Observações pessoais**: -
+**Data de entrega**: 07/06/22
 
-**Data de entrega**: pendente
+## Trilha 4: Grails
+**Assunto**: Microserviço com Grails
+
+**Descrição do desafio**: Implementação de microserviço para Vagas.
+
+**Observações pessoais**: A grande dificuldade de Grails é a instalação e se acostumar com a configuração de diretório confusa em comparação com Spring/Micronaut. A curva de aprendizado foi muito grande e não tem muito material disponível que deixa tudo mastigadinho, então tive que me esforçar para esmiuçar a documentação e tentar encaixar as pecinhas... mas quando eu encaixei, toda a raiva e frustração foi embora e me maravilhei com o scaffolding e a ausência de configuração extensa do Spring. 
+
+Links que me foram úteis nessa jornada:
+
+- [Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured](https://stackoverflow.com/questions/51221777/failed-to-configure-a-datasource-url-attribute-is-not-specified-and-no-embedd), do StackOverflow
+- [DBConsole in Grails](https://stackoverflow.com/questions/42179053/where-is-dbconsole-in-grails-v3-2-5), do StackOverflow
+- [Grails Documentation: Your first Application](https://guides.grails.org/creating-your-first-grails-app/guide/index.html)
+- [Stop-app not working](https://github.com/grails/grails-core/issues/11398)
+- [Criando uma API Restfull com Grails](https://medium.com/@franklin.bourguignon/criando-uma-api-restfull-com-grails-ab49e1e7632), por Franklin Bourguignon
+- [Grails keep deleting my tables](https://stackoverflow.com/questions/6548663/grails-keep-deleting-my-tables), do StackOverflow
+
+**Data de entrega**: 18/06/22
+
+## Trilha 5: Micronaut
+**Assunto**: Microserviço com Micronaut
+
+**Descrição do desafio**: Implementação de microserviço para Competências.
+
+**Observações pessoais**: As dependências de Micronaut no Gradle são absolutamente INSUPORTÁVEIS e a documentação não ajudou. O initializer do Intellij para Micronaut tem um bug que coloca 2 dependências jdbc juntas que impedem a inicialização e foi uma dor de cabeça ir testando uma a uma, até que eu desisti e criei um novo projeto em outro repositório sem nenhuma dependência para ir colocando apenas as que eram absolutamente necessárias. Também tem um conflito com Javax e Jakarta (que é também colocado como padrão no initializer).
+
+Assim como em Grails, a curva de aprendizado foi grande - inclusive maior ainda por causa da documentação meio desatualizada em algumas partes e pouco conteúdo pelo framework ainda ser muito recente. 
+
+Depois que consegui encaixar as pecinhas, me maravilhei com a falta de cabeçalho de configuração nos endpoints mas não me sinto segura o suficiente para largar Spring e partir apenas para Micronaut. 
+
+- [Creating a REST Application with Micronaut](https://medium.com/danieldiasjava/creating-a-rest-application-with-micronaut-30a001b3c38b), por Daniel Dias
+- [Como usar o Micronaut Data JDBC](https://blog.johnowl.com/como-usar-o-micronaut-data-jdbc/), por João Paulo Gomes
+- [JpaRepository findAll() returns empty](https://stackoverflow.com/questions/56371084/jparepository-findall-returns-empty-list), do StackOverflow
+- [Micronaut 1.0.RC1 with plain Hibernate JPA fails at startup](https://stackoverflow.com/questions/52633597/micronaut-1-0-rc1-with-plain-hibernate-jpa-fails-at-startup), do StackOverflow
+
+**Data de entrega**: 18/06/22
+
+## Refatoração de microserviço de Spring, database com DataGrip e o frontend em Angular
+À medida que o programa se encerra (já são quase mais de 6 meses na data que escrevo isso), as exigências e responsabilidades pesam mais. Isso me levou a duvidar das minhas capacidades e entrei numa espiral de não saber se conseguiria cumprir com os prazos... mas se você está lendo isso aqui, quer dizer que eu consegui sim haha escrevo essa parte para minha eu do futuro ler e saber que vai ficar tudo bem. 
+
+Percebi que meu conhecimento de Spring e Angular não estava tão consolidado por causa da corrida para finalizar a entrega, mas as entregas seguintes dependiam justamente desse conhecimento que fiz nas coxas. 
+
+Nesse período de ansiedade e frustração resolvi comprar o livro *The Pragmatic Programmer (O Programador Pragmático)* e ele me tirou desse fundo do poço ao restaurar minha confiança. Os capítulos são divididos em tópicos (que na verdade são dicas) que podem ser lidos em qualquer ordem.
+
+As que mais me chamaram a atenção e me inspiraram para voltar para a cadeira e encarar as consequências das minhas decisões foram:
+> - **1. Se importe com o seu ofício:** porque passar sua vida desenvolvendo software se você não se importar em fazê-lo com qualidade?
+> - **2. Reflita! Sobre o seu trabalho:** desligue o piloto automático e retome o controle. Constantemente critique e avalie o seu trabalho.
+> - **5. Não viva com janelas quebradas:** arrume designs ruins, decisões erradas e código ruim no momento que você vê-los.
+> - **18. Não existem decisões finais:** nenhuma decisão é escrita em pedra.
+
+O resultado final de 3 dias de trabalho intenso foi esse:
+
+- Criação de módulo só para Spring, com divisão bem clara entre Candidato/Empresa e endpoints mais autoexplicativos
+- Implementação da interface CrudRepository com custom queries ao invés de ficar reinventando a roda 
+- Refatoração de todas as tabelas usando DataGrip porque o PgAdmin 4 não oferece uma experiência de usuário intuitiva para meu nível de conhecimento. Também desisti de mexer com arrays de competências para candidatos e vagas, então foram criadas duas tabelas (candidatos_competencias e vagas_competencias) que servem de ponte para as entidades
+- Cada componente do frontend tinha um arquivo .css próprio, mas todos eram iguais - coloquei todos com referência para o .css da página inicial e exclui os arquivos desnecessários
+- Criação dos diretórios Candidato e Empresa com subdiretórios ao invés de deixar tudo junto
+- Ajuste de endpoints nas requisições
+
+... além das entregas das trilhas 4 e 5 de uma vez só. 
