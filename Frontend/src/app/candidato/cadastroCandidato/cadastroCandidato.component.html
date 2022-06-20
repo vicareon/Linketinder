@@ -1,0 +1,32 @@
+<body>
+<div class="caixa-principal">
+  <h1>cadastro de usuário</h1>
+  <form (ngSubmit)="onSubmit()" #cadastroCandidato="ngForm">
+    <div class="form-group">
+      <p><input type="text" name="nome" placeholder="Nome" [(ngModel)]="nome"></p>
+      <p><input type="text" name="email" placeholder="Email" [(ngModel)]="email"></p>
+      <p><input type="text" name="estado" placeholder="Estado" [(ngModel)]="estado"></p>
+      <p><input type="text" name="pais" placeholder="País" [(ngModel)]="pais"></p>
+      <p><input type="text" name="cep" placeholder="Cep" [(ngModel)]="cep"></p>
+      <p><input type="text" name="idade" placeholder="Idade" [(ngModel)]="idade"></p>
+      <p><input type="text" name="cpf" placeholder="CPF" [(ngModel)]="cpf"></p>
+      <p><input type="text" name="formacaoAcademica" placeholder="Formação Acadêmica" [(ngModel)]="formacao"></p>
+      <p><input type="text" name="descricao" placeholder="Descrição" [(ngModel)]="descricao"></p>
+
+      <div *ngFor="let c of listaCompetencias; let i=index">
+        <label>
+          <input type="checkbox" [value]="c.value">
+          {{c.competencia}}
+        </label>
+      </div>
+      <p><input type="text" name="competencia" placeholder="Competência" [(ngModel)]="competencia"></p>
+
+      <p><input type="text" name="senha" placeholder="Senha" [(ngModel)]="senha"></p>
+    </div>
+  </form>
+  <nav>
+    <button class="button" type="submit" routerLink="/candidato" (click)="onSubmit()">Salvar</button>
+  </nav>
+</div>
+</body>
+<router-outlet></router-outlet>

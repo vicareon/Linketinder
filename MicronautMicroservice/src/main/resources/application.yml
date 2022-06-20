@@ -3,6 +3,8 @@ micronaut:
     name: micronautmicroservice
   server:
     port: 8082
+    cors:
+      enabled: true
 datasources:
   default:
     url: jdbc:postgresql://localhost:5432/linketindertestes

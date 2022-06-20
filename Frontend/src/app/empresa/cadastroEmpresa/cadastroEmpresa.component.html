@@ -1,0 +1,21 @@
+<body>
+<div class="caixa-principal">
+  <h1>cadastro de usuário</h1>
+  <form (ngSubmit)="onSubmit()" #cadastroEmpresa="ngForm">
+    <div class="form-group">
+      <p><input type="text" name="nome" placeholder="Nome" [(ngModel)]="nome"></p>
+      <p><input type="text" name="email" placeholder="Email" [(ngModel)]="email"></p>
+      <p><input type="text" name="cep" placeholder="CEP" [(ngModel)]="cep"></p>
+      <p><input type="text" name="estado" placeholder="Estado" [(ngModel)]="estado"></p>
+      <p><input type="text" name="pais" placeholder="País" [(ngModel)]="pais"></p>
+      <p><input type="text" name="descricao" placeholder="Descrição" [(ngModel)]="descricao"></p>
+      <p><input type="text" name="cnpj" placeholder="CNPJ" [(ngModel)]="cnpj"></p>
+      <p><input type="text" name="senha" placeholder="Senha" [(ngModel)]="senha"></p>
+    </div>
+  </form>
+  <nav>
+    <button class="button" type="submit" routerLink="/empresa/cadastro/vaga" (click)="onSubmit()">Salvar</button>
+  </nav>
+</div>
+</body>
+<router-outlet></router-outlet>
