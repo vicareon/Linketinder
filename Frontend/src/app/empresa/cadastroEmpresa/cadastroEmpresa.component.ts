@@ -8,14 +8,14 @@ import {Empresa} from "./empresa";
   styleUrls: ['../../index/index.component.css']
 })
 export class CadastroEmpresaComponent implements OnInit {
-  nome: any;
-  email: any;
-  estado: any;
-  pais: any;
-  cep: any;
-  cnpj: any;
-  descricao: any;
-  senha: any;
+  nome: any
+  email: any
+  cep: any
+  estado: any
+  pais: any
+  descricao: any
+  cnpj: any
+  senha: any
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class CadastroEmpresaComponent implements OnInit {
   }
 
   onSubmit() {
-    const empresa = new Empresa(this.nome, this.email, this.estado, this.pais, this.cep, this.cnpj, this.descricao, this.senha)
+    const empresa = new Empresa(this.nome, this.email, this.cep, this.estado, this.pais, this.descricao, this.cnpj, this.senha)
     this.http.post('http://localhost:8081/empresa/cadastro', empresa).subscribe(
       resultado => {
         alert("Empresa cadastrada com sucesso!")

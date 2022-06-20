@@ -15,24 +15,24 @@ class Competencia {
     @Column(name="id")
     public int id
 
-    @Column(name="nome")
-    public String nome
+    @Column(name="competencia")
+    public String competencia
 
-    Competencia(int id, String nome) {
+    Competencia(int id, String competencia) {
         this.id = id
-        this.nome = nome
+        this.competencia = competencia
     }
 
     Competencia() {
 
     }
 
-    String getNome() {
-        return nome
+    String getCompetencia() {
+        return competencia
     }
 
-    void setNome(String nome) {
-        this.nome = nome
+    void setCompetencia(String competencia) {
+        this.competencia = competencia
     }
 
     int getId() {

@@ -1,17 +1,13 @@
-import {Competencia} from "../../candidato/cadastroCandidato/competencia";
-
 export class Vaga {
   nome: string;
   estado: string;
+  empresa: string;
   descricao: string;
-  cnpj: string;
-  listaCompetencias: Competencia[];
 
-  constructor(nome: string, estado: string, descricao: string, cnpj: string, listaCompetencias: Competencia[]) {
+  constructor(nome: string, estado: string, empresa: string, descricao: string) {
     this.nome = nome;
     this.estado = estado;
+    this.empresa = empresa;
     this.descricao = descricao;
-    this.cnpj = cnpj;
-    this.listaCompetencias = listaCompetencias;
   }
 }

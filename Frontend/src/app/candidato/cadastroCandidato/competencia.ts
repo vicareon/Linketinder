@@ -1,7 +1,7 @@
 export class Competencia {
-  nome: string;
+  competencia: string;
 
-  constructor(nome: string) {
-    this.nome = nome;
+  constructor(competencia: string) {
+    this.competencia = competencia;
   }
 }

@@ -10,17 +10,17 @@
       <p><input type="text" name="cep" placeholder="Cep" [(ngModel)]="cep"></p>
       <p><input type="text" name="idade" placeholder="Idade" [(ngModel)]="idade"></p>
       <p><input type="text" name="cpf" placeholder="CPF" [(ngModel)]="cpf"></p>
-      <p><input type="text" name="formacaoAcademica" placeholder="Formação Acadêmica" [(ngModel)]="formacaoAcademica"></p>
+      <p><input type="text" name="formacaoAcademica" placeholder="Formação Acadêmica" [(ngModel)]="formacao"></p>
       <p><input type="text" name="descricao" placeholder="Descrição" [(ngModel)]="descricao"></p>
 
       //lista de competências aqui
       <div *ngFor="let c of listaCompetencias; let i=index">
         <label>
           <input type="checkbox" [value]="c.value">
-          {{c.nome}}
+          {{c.competencia}}
         </label>
       </div>
-      <p><input type="text" name="nomeCompetencia" placeholder="Competência" [(ngModel)]="nome"></p>
+      <p><input type="text" name="competencia" placeholder="Competência" [(ngModel)]="competencia"></p>
 
       <p><input type="text" name="senha" placeholder="Senha" [(ngModel)]="senha"></p>
     </div>

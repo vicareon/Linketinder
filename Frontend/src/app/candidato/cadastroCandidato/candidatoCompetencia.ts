@@ -1,9 +1,9 @@
 export class CandidatoCompetencia {
   cpf: string;
-  nome: string;
+  competencia: string;
 
-  constructor(cpf: string, nome: string) {
+  constructor(cpf: string, competencia: string) {
     this.cpf = cpf;
-    this.nome = nome;
+    this.competencia = competencia;
   }
 }

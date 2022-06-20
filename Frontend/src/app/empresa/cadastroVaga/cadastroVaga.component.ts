@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Competencia} from "../../candidato/cadastroCandidato/competencia";
-import {newArray} from "@angular/compiler/src/util";
+import {HttpClient} from "@angular/common/http";
+import {Vaga} from "./vaga";
 
 @Component({
   selector: 'app-cadastro-vaga',
@@ -11,18 +11,19 @@ export class CadastroVagaComponent implements OnInit {
   nome: any;
   estado: any;
   descricao: any;
-  competencias: any;
-  cnpj: any;
+  empresa: any;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    let competencias = []
-
-
-
+    const vaga = new Vaga(this.nome, this.estado, this.descricao, this.empresa)
+    this.http.post('http://localhost:8081/empresa/cadastro', vaga).subscribe(
+      resultado => {
+        alert("Vaga cadastrada com sucesso!")
+      }
+    )
   }
 }
