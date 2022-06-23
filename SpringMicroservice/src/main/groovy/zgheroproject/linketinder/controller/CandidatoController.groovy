@@ -36,6 +36,7 @@ class CandidatoController{
         return candidatoService.listarCandidatos()
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/nome/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -43,6 +44,7 @@ class CandidatoController{
         candidatoService.atualizarNome(cpf, nome)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/email/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -50,6 +52,7 @@ class CandidatoController{
         candidatoService.atualizarEmail(cpf, email)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/cep/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -57,6 +60,7 @@ class CandidatoController{
         candidatoService.atualizarCep(cpf, cep)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/estado/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -64,6 +68,7 @@ class CandidatoController{
         candidatoService.atualizarEstado(cpf, estado)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/pais/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -71,6 +76,7 @@ class CandidatoController{
         candidatoService.atualizarPais(cpf, pais)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/descricao/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -78,6 +84,7 @@ class CandidatoController{
         candidatoService.atualizarDescricao(cpf, descricao)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/formacao/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -85,6 +92,7 @@ class CandidatoController{
         candidatoService.atualizarFormacao(cpf, formacao)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/idade/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
@@ -92,6 +100,7 @@ class CandidatoController{
         candidatoService.atualizarIdade(cpf, idade)
     }
 
+    @CrossOrigin
     @Transactional
     @RequestMapping(value = "/atualizar/senha/{cpf}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)

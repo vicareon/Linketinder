@@ -1,5 +1,6 @@
 package zgheroproject.linketinder.controller
 
+import io.micronaut.http.annotation.Body
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Delete
 import io.micronaut.http.annotation.Get
@@ -16,7 +17,7 @@ class CandidatoCompetenciaController {
     private CandidatoCompetenciaRepository candidatoCompetenciaRepository
 
     @Post("/cadastro")
-    void salvarCompetencia(CandidatoCompetencia candidatoCompetencia){
+    void salvarCompetencia(@Body CandidatoCompetencia candidatoCompetencia){
         candidatoCompetenciaRepository.save(candidatoCompetencia)
     }
 
