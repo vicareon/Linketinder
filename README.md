@@ -164,3 +164,16 @@ O resultado final de 3 dias de trabalho intenso foi esse:
 - Ajuste de endpoints nas requisições
 
 ... além das entregas das trilhas 4 e 5 de uma vez só. 
+
+## Trilha 6: Swagger
+**Assunto**: Framework Swagger
+
+**Descrição do desafio**: Documentação de todas as APIs do Linketinder usando esse framework.
+
+**Observações pessoais**: Eu já tinha testado todos os endpoints com Postman, então a novidade foi a estrutura da documentação mesmo. Utilizei o [Inspector](https://inspector.swagger.io/builder) para realizar as requisições e o SwaggerHub para edição, mas logo vou ter que abandonar essa ferramenta pela limitação de 3 definições e 20 requisições.
+
+A dificuldade nessa trilha foi a implementação da notação de Cors na API de Spring e que eu esqueci de definir o corpo no método de postagem na API de Micronaut - por exemplo, se a requisição era um objeto JSON com a estrutura { "exemplo":"teste" }, o "teste" ficava como null. 
+
+A documentação está em JSON (resolved e unresolved) em Anexos/Swagger. 
+
+**Data de entrega**: 22/06/22
