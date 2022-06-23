@@ -1,0 +1,259 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Microserviço de Micronaut",
+    "description" : "Microserviço de gerenciamento de competências da aplicação Linketinder.",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8082"
+  } ],
+  "paths" : {
+    "/competencia/candidato/lista" : {
+      "get" : {
+        "description" : "Retorna a lista de competências relacionadas com candidatos do banco de dados.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "[{\"id\":1,\"cpf\":\"teste\",\"competencia\":\"Java\"},{\"id\":2,\"cpf\":\"postman\",\"competencia\":\"Groovy\"},{\"id\":3,\"cpf\":\"teste\",\"competencia\":\"Python\"},{\"id\":30,\"cpf\":\"postman\",\"competencia\":\"Java\"},{\"id\":34,\"cpf\":\"postman\",\"competencia\":\"Java\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/candidato/cadastro" : {
+      "post" : {
+        "description" : "Inserção de objeto competência relacionado com candidato no banco de dados.",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "cpf" : {
+                    "type" : "string"
+                  },
+                  "competencia" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"cpf\":\"teste\",\n    \"competencia\":\"Java\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/candidato/excluir/id" : {
+      "delete" : {
+        "description" : "Exclui o objeto competência relacionado com candidato no banco de dados a partir da ID desejada.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/lista" : {
+      "get" : {
+        "description" : "Retorna a lista de competências do banco de dados.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "[{\"id\":1,\"competencia\":\"Java\"},{\"id\":2,\"competencia\":\"Python\"},{\"id\":3,\"competencia\":\"Groovy\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/cadastro" : {
+      "post" : {
+        "description" : "Inserção de objeto competência no banco de dados.",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "competencia" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"competencia\":\"Swagger\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/excluir/id" : {
+      "delete" : {
+        "description" : "Exclui o objeto competência no banco de dados a partir da ID desejada.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/vaga/lista" : {
+      "get" : {
+        "description" : "Retorna a lista de competências relacionadas com vagas do banco de dados.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK.",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "[{\"id\":1,\"id_vaga\":6,\"competencia\":\"Java\"},{\"id\":2,\"id_vaga\":6,\"competencia\":\"Groovy\"},{\"id\":15,\"id_vaga\":7,\"competencia\":\"Python\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/vaga/cadastro" : {
+      "post" : {
+        "description" : "Inserção de objeto competência relacionado com candidato no banco de dados.",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "id_vaga" : {
+                    "type" : "string"
+                  },
+                  "competencia" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"id_vaga\":\"7\",\n    \"competencia\":\"Java\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    },
+    "/competencia/vaga/excluir/id" : {
+      "delete" : {
+        "description" : "Exclui o objeto competência relacionado com vaga no banco de dados a partir da ID desejada.",
+        "responses" : {
+          "200" : {
+            "description" : "Resposta HTTP padrão de OK."
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8082"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8082"
+      } ]
+    }
+  }
+}

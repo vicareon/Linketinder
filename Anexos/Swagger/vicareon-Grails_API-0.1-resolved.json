@@ -1,0 +1,174 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Microserviço de Grails",
+    "description": "Microserviço de gerenciamento de vagas da aplicação Linketinder.",
+    "version": "0.1"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "paths": {
+    "/vaga/id": {
+      "delete": {
+        "description": "Exclui a vaga com o ID desejado no banco de dados.",
+        "responses": {
+          "204": {
+            "description": "Resposta HTTP padrão de DELETED."
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:8080"
+          }
+        ]
+      },
+      "patch": {
+        "description": "Atualiza os dados da vaga selecionada por ID de acordo com o valor definido no body da requisição.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/vaga_id_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"descricao\":\"swagger atualizado\"\n}"
+                },
+                "1": {
+                  "value": "{\n    \"estado\":\"swagger atualizado\"\n}"
+                },
+                "2": {
+                  "value": "{\n    \"nome\":\"swagger atualizado\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Resposta HTTP padrão de OK.",
+            "content": {
+              "application/json;charset=UTF-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:8080"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:8080"
+        }
+      ]
+    },
+    "/vaga": {
+      "get": {
+        "description": "Retorna a lista de vagas do banco de dados.",
+        "responses": {
+          "200": {
+            "description": "Resposta HTTP padrão de OK.",
+            "content": {
+              "application/json;charset=UTF-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:8080"
+          }
+        ]
+      },
+      "post": {
+        "description": "Inserção de objeto vaga no banco de dados.",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/vaga_body"
+              },
+              "examples": {
+                "0": {
+                  "value": "{\n    \"nome\":\"swagger\",\n    \"estado\":\"swagger\",\n    \"descricao\":\"swagger\",\n    \"empresa\":\"teste\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Resposta HTTP padrão de CREATED.",
+            "content": {
+              "application/json;charset=UTF-8": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {}
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:8080"
+          }
+        ]
+      },
+      "servers": [
+        {
+          "url": "http://localhost:8080"
+        }
+      ]
+    }
+  },
+  "components": {
+    "schemas": {
+      "vaga_id_body": {
+        "type": "object",
+        "properties": {
+          "estado": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          }
+        }
+      },
+      "vaga_body": {
+        "type": "object",
+        "properties": {
+          "estado": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          },
+          "empresa": {
+            "type": "string"
+          },
+          "descricao": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

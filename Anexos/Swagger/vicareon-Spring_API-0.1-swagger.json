@@ -1,0 +1,655 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "defaultTitle",
+    "description" : "defaultDescription",
+    "version" : "0.1"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8081"
+  } ],
+  "paths" : {
+    "/empresa/lista" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "[{\"id\":0,\"nome\":\"teste\",\"email\":\"teste\",\"cep\":\"teste\",\"estado\":\"teste\",\"pais\":\"teste\",\"descricao\":\"teste\",\"cnpj\":\"teste\",\"senha\":\"teste\"},{\"id\":0,\"nome\":\"postman atualizado\",\"email\":\"postman atualizado\",\"cep\":\"postman atualizado\",\"estado\":\"postman atualizado\",\"pais\":\"postman atualizado\",\"descricao\":\"postman atualizado\",\"cnpj\":\"postman\",\"senha\":\"senha\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/estado/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/email/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/nome/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/lista" : {
+      "get" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object",
+                  "properties" : { }
+                },
+                "examples" : {
+                  "0" : {
+                    "value" : "[{\"id\":2,\"nome\":\"teste\",\"email\":\"teste\",\"cep\":\"teste\",\"estado\":\"teste\",\"pais\":\"teste\",\"descricao\":\"teste\",\"cpf\":\"teste\",\"formacao\":\"teste\",\"idade\":\"23\",\"senha\":\"teste\"},{\"id\":3,\"nome\":\"teste 2\",\"email\":\"teste 2\",\"cep\":\"teste 2\",\"estado\":\"teste 2\",\"pais\":\"teste 2\",\"descricao\":\"teste 2\",\"cpf\":\"teste 2\",\"formacao\":\"teste 2\",\"idade\":\"23\",\"senha\":\"teste2\"},{\"id\":0,\"nome\":\"postman atualizado\",\"email\":\"postman atualizado\",\"cep\":\"postman atualizado\",\"estado\":\"postman atualizado\",\"pais\":\"postman atualizado\",\"descricao\":\"postman atualizado\",\"cpf\":\"postman\",\"formacao\":\"postman atualizado\",\"idade\":\"99\",\"senha\":\"senha\"},{\"id\":0,\"nome\":\"angular\",\"email\":\"angular\",\"cep\":\"angular\",\"estado\":\"angular\",\"pais\":\"angular\",\"descricao\":\"angular\",\"cpf\":\"angular\",\"formacao\":\"angular\",\"idade\":\"23\",\"senha\":\"angular\"}]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/cep/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/email/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/cadastro" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "senha" : {
+                    "type" : "string"
+                  },
+                  "estado" : {
+                    "type" : "string"
+                  },
+                  "nome" : {
+                    "type" : "string"
+                  },
+                  "cnpj" : {
+                    "type" : "string"
+                  },
+                  "email" : {
+                    "type" : "string"
+                  },
+                  "cep" : {
+                    "type" : "string"
+                  },
+                  "pais" : {
+                    "type" : "string"
+                  },
+                  "descricao" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"nome\":\"swagger\",\n    \"email\":\"swagger\",\n    \"cep\":\"swagger\",\n    \"estado\":\"swagger\",\n    \"pais\":\"swagger\",\n    \"descricao\":\"swagger\",\n    \"cnpj\":\"swagger\",\n    \"senha\":\"swagger\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/excluir" : {
+      "delete" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/descricao/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/pais/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/cep/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/formacao/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/senha/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger2"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/pais/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/estado/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/nome/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/empresa/atualizar/descricao/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "swagger atualizado"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/atualizar/idade/swagger" : {
+      "patch" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "text/plain" : {
+              "schema" : {
+                "type" : "string"
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "99"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "200" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    },
+    "/candidato/cadastro" : {
+      "post" : {
+        "description" : "Auto generated using Swagger Inspector",
+        "requestBody" : {
+          "content" : {
+            "application/json" : {
+              "schema" : {
+                "type" : "object",
+                "properties" : {
+                  "idade" : {
+                    "type" : "string"
+                  },
+                  "senha" : {
+                    "type" : "string"
+                  },
+                  "estado" : {
+                    "type" : "string"
+                  },
+                  "formacao" : {
+                    "type" : "string"
+                  },
+                  "cpf" : {
+                    "type" : "string"
+                  },
+                  "nome" : {
+                    "type" : "string"
+                  },
+                  "email" : {
+                    "type" : "string"
+                  },
+                  "cep" : {
+                    "type" : "string"
+                  },
+                  "pais" : {
+                    "type" : "string"
+                  },
+                  "descricao" : {
+                    "type" : "string"
+                  }
+                }
+              },
+              "examples" : {
+                "0" : {
+                  "value" : "{\n    \"nome\":\"swagger\",\n    \"email\":\"swagger\",\n    \"cep\":\"swagger\",\n    \"estado\":\"swagger\",\n    \"pais\":\"swagger\",\n    \"descricao\":\"swagger\",\n    \"cpf\":\"swagger\",\n    \"formacao\":\"swagger\",\n    \"idade\":\"23\",\n    \"senha\":\"swagger\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses" : {
+          "201" : {
+            "description" : "Auto generated using Swagger Inspector"
+          }
+        },
+        "servers" : [ {
+          "url" : "http://localhost:8081"
+        } ]
+      },
+      "servers" : [ {
+        "url" : "http://localhost:8081"
+      } ]
+    }
+  }
+}
