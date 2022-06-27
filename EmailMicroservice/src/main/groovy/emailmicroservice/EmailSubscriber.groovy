@@ -15,6 +15,9 @@ class EmailSubscriber {
     @Autowired
     CandidatoRepository candidatoRepository
 
+    @Autowired
+    EmailService emailService
+
     Properties properties = new Properties()
     KafkaConsumer<String, String> consumer
 
@@ -31,6 +34,7 @@ class EmailSubscriber {
 
     void escutarTopico() throws Exception{
         consumer.subscribe(Arrays.asList("Email"))
+        EmailDetails details = new EmailDetails("teste@teste.com", "Nova vaga disponível no banco de dados", "Alerta de vaga")
 
         while(true){
             try{
@@ -38,6 +42,7 @@ class EmailSubscriber {
                 for(ConsumerRecord<String, String> record : records){
                     println(record.value())
                     Thread.sleep(500)
+                    emailService.sendSimpleMail(details)
                 }
             } catch(Exception e){
                 e.printStackTrace()
