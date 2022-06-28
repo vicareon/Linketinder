@@ -17,4 +17,9 @@ class Vagas{
 
     static constraints = {
     }
+
+    def beforeValidate() {
+        KafkaSender kafkaSender = new KafkaSender()
+        kafkaSender.send("vaga criada: " + nome)
+    }
 }
