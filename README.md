@@ -177,3 +177,30 @@ A dificuldade nessa trilha foi a implementação da notação de Cors na API de 
 A documentação está em JSON (resolved e unresolved) em Anexos/Swagger. 
 
 **Data de entrega**: 22/06/22
+
+## Trilha 1, parte 4: Kafka
+**Assunto**: -
+
+**Descrição do desafio**: -
+
+**Observações pessoais**: - 
+
+**Data de entrega**: 27/06/22
+
+## Trilha 2: Docker
+**Assunto**: -
+
+**Descrição do desafio**: -
+
+**Observações pessoais**: - 
+
+**Data de entrega**: pendente
+
+## Trilha 3: Jenkins
+**Assunto**: -
+
+**Descrição do desafio**: -
+
+**Observações pessoais**: - 
+
+**Data de entrega**: pendente
