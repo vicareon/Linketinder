@@ -201,9 +201,9 @@ Felizmente eu salvei o material que me guiou para colocar aqui:
 **Data de entrega**: 27/06/22
 
 ## Trilha 2: Docker
-**Assunto**: -
+**Assunto**: Docker, containers e imagens
 
-**Descrição do desafio**: -
+**Descrição do desafio**: Gerar imagens Docker para cada microserviço da aplicação e executá-los.
 
 **Observações pessoais**: A dificuldade com Docker já começou na sua instalação, porque o Docker Desktop tinha o docker-ce-cli como dependência obrigatória para instalação e o guia de instalação oficial não funcionava de jeito nenhum, dizendo que o repositório não existia. 
 
