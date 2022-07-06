@@ -13,6 +13,5 @@ class VagasControllerSpec extends Specification implements ControllerUnitTest<Va
 
     void "test something"() {
         expect:"fix me"
-            true == false
     }
 }

@@ -27,11 +27,13 @@ dependencies {
     annotationProcessor("io.micronaut.data:micronaut-data-hibernate-jpa")
     implementation 'io.micronaut.data:micronaut-data-hibernate-jpa:3.4.2'
     implementation 'javax.inject:javax.inject:1'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.11'
+
 }
 
 
 application {
-    mainClass.set("zgheroproject.linketinder.Application")
+    mainClass.set("zgheroproject.linketinder.CompetenciasApplication")
 }
 java {
     sourceCompatibility = JavaVersion.toVersion("11")
@@ -48,5 +50,8 @@ micronaut {
     }
 }
 
-
-
+jar {
+    manifest {
+        attributes ( 'Main-Class': 'zgheroproject.linketinder.CompetenciasApplication' )
+    }
+}

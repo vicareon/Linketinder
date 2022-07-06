@@ -74,7 +74,8 @@ dependencies {
     testImplementation 'org.seleniumhq.selenium:selenium-support:4.2.1'
     testRuntimeOnly 'org.seleniumhq.selenium:selenium-chrome-driver:4.2.1'
     testRuntimeOnly 'org.seleniumhq.selenium:selenium-firefox-driver:4.2.1'
-    implementation 'org.postgresql:postgresql:42.3.6'
+    implementation 'org.postgresql:postgresql:42.4.0'
+
     implementation 'io.micronaut:micronaut-http-client:3.5.1'
     implementation 'org.grails:grails-datastore-rest-client:6.1.9.RELEASE'
     implementation 'org.springframework.kafka:spring-kafka'

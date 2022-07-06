@@ -9,7 +9,7 @@ import org.hibernate.SessionFactory
 @Rollback
 class VagasServiceSpec extends Specification {
 
-    VagasService vagasService
+    /*VagasService vagasService
     SessionFactory sessionFactory
 
     private Long setupData() {
@@ -70,5 +70,5 @@ class VagasServiceSpec extends Specification {
 
         then:
         vagas.id != null
-    }
+    }*/
 }
