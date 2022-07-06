@@ -22,7 +22,7 @@ class EmailSubscriber {
     KafkaConsumer<String, String> consumer
 
     EmailSubscriber(){
-        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092")
+        properties.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.0.4:9092")
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName())
         properties.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName())
         properties.put(ConsumerConfig.GROUP_ID_CONFIG, "group1")
