@@ -179,11 +179,24 @@ A documentação está em JSON (resolved e unresolved) em Anexos/Swagger.
 **Data de entrega**: 22/06/22
 
 ## Trilha 1, parte 4: Kafka
-**Assunto**: -
+**Assunto**: Kafka e Mensageria
 
-**Descrição do desafio**: -
+**Descrição do desafio**: Criação de microserviço de envio de emails utilizando Kafka e o conceito de mensageria, no qual a cada inserção de vaga no banco de dados, um email de alerta é enviado para todos os candidatos cadastrados na plataforma com o nome da vaga e uma mensagem customizada.
 
-**Observações pessoais**: - 
+**Observações pessoais**: No dia que estou escrevendo essa descrição (dia 06/07) já se passou tempo o suficiente para eu esquecer do que eu queria colocar aqui. Lembro que não foi uma experiência agradável entregar essa trilha em apenas 1 dia (mesmo com um estudo prévio anterior), porque na hora de sentar na cadeira e codar é que o filho chora e a mãe não vê. 
+
+A ideia é a seguinte: temos o microserviço de email (EmailMicroservice) construído com Spring e que tem o consumidor do Kafka. O produtor ficou no microserviço de vagas construído com Grails, e a comunicação entre os dois acontece antes da validação da vaga no banco de dados quando faz uma requisição POST para o endpoint. 
+
+Grails age de maneiras misteriosas e scaffolding é um exemplo disso. Não pude alterar diretamente o método de persistência, então a alternativa que encontrei foi mexer no domain de Vagas e inserir um evento beforeValidate().
+
+Infelizmente não pude completar o requisito de pegar a lista de email de candidatos e enviar os emails mas consigo enviar o email para um endereço de teste, então ainda está valendo.
+
+Felizmente eu salvei o material que me guiou para colocar aqui:
+
+- [Spring Boot - Apache Kafka](https://www.tutorialspoint.com/spring_boot/spring_boot_apache_kafka.htm), no TutorialsPoint
+- [Spring Boot + Apache Kafka Hello World Example](https://www.javainuse.com/spring/spring-boot-apache-kafka-hello-world), no JavaInUse
+- [Emailing microservice made easy](https://www.sipios.com/blog-tech/emailing-microservice-apache-kafka-spring-boot), por Kévin Guilloy
+- [Spring Boot - Sending Email via SMTP](https://www.geeksforgeeks.org/spring-boot-sending-email-via-smtp/), no GeeksforGeeks
 
 **Data de entrega**: 27/06/22
 
@@ -192,9 +205,61 @@ A documentação está em JSON (resolved e unresolved) em Anexos/Swagger.
 
 **Descrição do desafio**: -
 
-**Observações pessoais**: - 
+**Observações pessoais**: A dificuldade com Docker já começou na sua instalação, porque o Docker Desktop tinha o docker-ce-cli como dependência obrigatória para instalação e o guia de instalação oficial não funcionava de jeito nenhum, dizendo que o repositório não existia. 
 
-**Data de entrega**: pendente
+Partindo para o estudo prévio (ou seja, antes de começar a escrever código), peguei o conceito de diferença entre imagem e container muito rápido graças à explicação extremamente simples do professor ao comparar a imagem à Classe e o container ao Objeto - tudo fez sentido e fiquei animada para aplicar esse novo conhecimento o mais rápido possível, pensando que a única dificuldade que eu teria com esse projeto já tinha passado.
+
+Paguei pela minha ingenuidade logo depois com o container de Postgresql e o PgAdmin4. 
+
+De início tentei criar um novo servidor utilizando os dois e até consegui, mas não conseguia conectá-lo de jeito nenhum com os outros microserviços. Com a ajuda do tutor, nos aventuramos no mundo de pgclusters e outros termos que nunca vi. Tentamos de tudo e nada. A dificuldade foi tanta que precisamos de ajuda de um desenvolvedor extremamente experiente que resolveu o problema que se arrastava a 2 dias em 30 minutos. Não sei se ele vai chegar a ler isso aqui, mas obrigada de novo... [ainda tenho muito a aprender](https://pbs.twimg.com/media/EaKX9nMXgAIt9RU?format=jpg&name=360x360).
+
+Outros desafios estavam à espera: o Dockerfile de cada módulo de microserviço com todas as particularidades de seus frameworks. Isso aqui foi praticamente um rito de passagem porque em todas as trilhas anteriores eu conseguia achar algum guia, ou tutorial, ou thread no StackOverflow que descrevia exatamente (ou chegava muito próximo) o que eu estava passando.
+
+Agora eu estava sozinha, porque achar um Dockerfile que vai dar exatamente certo com a configuração da sua aplicação logo de cara se mostrou uma tarefa quase impossível. Com exceção apenas do microserviço de Spring, na qual a documentação resolveu exatamente o meu problema, tive que ir pegando pedacinhos de cada exemplo que eu encontrava, testar, ver que não deu certo e procurar outro exemplo que talvez teria o pedacinho que estava faltando. Os dockerfiles são pequenininhos, com apenas algumas linhas, mas o esforço foi enorme para alguém que estava tendo contato com Docker pela primeira vez. 
+
+É uma carga enorme para enfiar na cabeça de uma vez só, especialmente porque tem uma deadline te espreitando a cada momento e a ansiedade começa a aparecer quando as coisas não estão (ainda) dando certo... mas a satisfação de ver tudo rodando bonitinho em cada container fez tudo valer a pena. Talvez deve ser a mesma sensação de correr uma maratona, mas eu não sei como é essa sensação porque nunca corri uma maratona.
+
+Materiais que me guiaram:
+
+- [How to Run PostgreSQL and pgAdmin Using Docker](https://towardsdatascience.com/how-to-run-postgresql-and-pgadmin-using-docker-3a6a8ae918b5), por Mahbub Zaman
+    - [Mesmo tutorial mas em português](https://renatogroffe.medium.com/postgresql-pgadmin-4-docker-compose-montando-rapidamente-um-ambiente-para-uso-55a2ab230b89), por Renato Groffe
+    - [Outro tutorial que também ajudou](https://www.programandocomcarlos.com.br/2020/01/postgresql-pgadmin-4-docker-compose.html), por Carlos Dorneles
+- [Installing Docker in Ubuntu, from repo: can't find repo](https://stackoverflow.com/questions/71393595/installing-docker-in-ubuntu-from-repo-cant-find-a-repo), no StackOverflow - única alternativa que funcionou para mim, resolve o problema de instalação do docker-ce-cli com o repositório mais recente 
+- [How to create a Dockerfile for a Micronaut App](https://johnnystarr.io/2021/04/17/how-to-create-a-dockerfile-for-a-micronaut-app/), por Johnny Starr - exemplo de Dockerfile para Micronaut
+- [Spring Boot with Docker](https://spring.io/guides/gs/spring-boot-docker/), na documentação de Spring - exemplo de Dockerfile que funciona de primeira, serviu para entender os comandos de build e run junto com Gradle
+- [Deploying a Spring Based War in a Docker Container](https://www.javainuse.com/devOps/docker/docker-war), no JavaInUse - exemplo de Dockerfile para Grails
+- [Spring Boot + Kafka + Zookeeper](https://codefresh.io/docs/docs/yaml-examples/examples/spring-boot-kafka-zookeeper/), na documentação do Codefresh 
+    - [Repositório](https://github.com/codefreshdemo/example-springboot-kafka) no GitHub com o exemplo de docker-compose juntando as duas imagens
+
+As imagens estão disponíveis no Dockerhub (requer login):
+- [Email](https://hub.docker.com/repository/docker/vicareon/emailmicroservice)
+- [Micronaut](https://hub.docker.com/repository/docker/vicareon/micronautmicroservice)
+- [Grails](https://hub.docker.com/repository/docker/vicareon/grailsmicroservice)
+- [Spring](https://hub.docker.com/repository/docker/vicareon/springmicroservice) 
+
+**Data de entrega**: 05/07/22
+
+## Tutorial: Como realizar deploy dos containers do Linketinder
+Uma sugestão do desafio da trilha de Docker foi a elaboração de um tutorial explicando como realizar o deploy dos containers para que as pessoas que não tem muito domínio. Antes de executar o tutorial no Intellij, é necessário rodar os containers do Postgres e do pgAdmin 4. O arquivo docker-compose está disponível na pasta de anexos clicando aqui.
+
+Agora, dentro do Intellij (ou da sua IDE de preferência) -
+
+1. Abrir um terminal local para cada módulo da aplicação
+2. Construir o jar/war com o Gradle:
+> ./gradlew build
+3. Executar o dockerfile para construção de um container a partir da imagem:
+> docker build -t [nome do microserviço] .
+4. Rodar o container na porta desejada:
+> docker run -p [porta do localhost]:[porta do container] [nome do microserviço]
+
+A fins de referência, as portas mapeadas na aplicação são:
+> Grails: 8080
+>
+> Spring: 8081
+>
+> Micronaut: 8082
+>
+> Email: 8083
 
 ## Trilha 3: Jenkins
 **Assunto**: -
