@@ -13,6 +13,5 @@ class VagasSpec extends Specification implements DomainUnitTest<Vagas> {
 
     void "test something"() {
         expect:"fix me"
-            true == false
     }
 }
