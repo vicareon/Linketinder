@@ -12,42 +12,46 @@ import javax.transaction.Transactional
 @Repository
 interface CandidatoRepository extends CrudRepository<Candidato, String>{
     Candidato save(Candidato candidato)
+
     List<Candidato> findAll()
-    void deleteById(String cpf)
-    Candidato getReferenceById(String cpf)
+    List<Candidato> findByCpf(String cpf)
+
+    void deleteByCpf(String cpf)
+
+    Candidato getReferenceByCpf(String cpf)
 
     @Transactional
     @Modifying
-    @Query("update Candidato c set c.nome = :nome where c.cpf = :cpf")
+    @Query("update Candidato c set c.nomeCandidato = :nome where c.cpf = :cpf")
     void atualizarNome(@Param(value = "cpf") String cpf, @Param(value = "nome") String nome)
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.email = :email where c.cpf = :cpf")
+    @Query("update Candidato c set c.emailCandidato = :email where c.cpf = :cpf")
     void atualizarEmail(@Param(value = "cpf") String cpf, @Param(value = "email") String email)
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.cep = :cep where c.cpf = :cpf")
+    @Query("update Candidato c set c.cepCandidato = :cep where c.cpf = :cpf")
     void atualizarCep(@Param(value = "cpf") String cpf, @Param(value = "cep") String cep)
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.estado = :estado where c.cpf = :cpf")
+    @Query("update Candidato c set c.estadoCandidato = :estado where c.cpf = :cpf")
     void atualizarEstado(@Param(value = "cpf") String cpf, @Param(value = "estado") String estado)
 
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.pais = :pais where c.cpf = :cpf")
+    @Query("update Candidato c set c.paisCandidato = :pais where c.cpf = :cpf")
     void atualizarPais(@Param(value = "cpf") String cpf, @Param(value = "pais") String pais)
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.descricao = :descricao where c.cpf = :cpf")
+    @Query("update Candidato c set c.descricaoCandidato = :descricao where c.cpf = :cpf")
     void atualizarDescricao(@Param(value = "cpf") String cpf, @Param(value = "descricao") String descricao)
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.formacao = :formacao where c.cpf = :cpf")
+    @Query("update Candidato c set c.formacaoCandidato = :formacao where c.cpf = :cpf")
     void atualizarFormacao(@Param(value = "cpf") String cpf, @Param(value = "formacao") String formacao)
 
     @Transactional
@@ -57,6 +61,6 @@ interface CandidatoRepository extends CrudRepository<Candidato, String>{
 
     @Transactional
     @Modifying(clearAutomatically = true)
-    @Query("update Candidato c set c.senha = :senha where c.cpf = :cpf")
+    @Query("update Candidato c set c.senhaCandidato = :senha where c.cpf = :cpf")
     void atualizarSenha(@Param(value = "cpf") String cpf, @Param(value = "senha") String senha)
 }

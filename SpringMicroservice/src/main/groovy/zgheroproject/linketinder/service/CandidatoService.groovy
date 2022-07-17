@@ -21,6 +21,10 @@ class CandidatoService{
         return candidatoRepository.findAll()
     }
 
+    List<Candidato> retornarCandidatoPorCpf(String cpf){
+        return candidatoRepository.findByCpf(cpf)
+    }
+
     void excluirCandidato(String cpf){
         candidatoRepository.deleteById(cpf)
     }

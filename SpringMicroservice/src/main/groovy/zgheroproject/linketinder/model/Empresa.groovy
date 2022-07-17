@@ -13,44 +13,44 @@ import javax.persistence.Table
 @Data
 @Table(name = "empresas", schema = "public")
 class Empresa{
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name = "id")
-    public int id
-
-    @Column(name = "nome")
-    public String nome
-
-    @Column(name = "email")
-    public String email
-
-    @Column(name = "cep")
-    public String cep
-
-    @Column(name = "estado")
-    public String estado
-
-    @Column(name = "pais")
-    public String pais
-
-    @Column(name = "descricao")
-    public String descricao
-
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column(name = "id_empresa")
+    public int idEmpresa
+
+    @Column(name = "nome_empresa")
+    public String nomeEmpresa
+
+    @Column(name = "email_empresa")
+    public String emailEmpresa
+
+    @Column(name = "cep_empresa")
+    public String cepEmpresa
+
+    @Column(name = "estado_empresa")
+    public String estadoEmpresa
+
+    @Column(name = "pais_empresa")
+    public String paisEmpresa
+
+    @Column(name = "descricao_empresa")
+    public String descricaoEmpresa
+
     @Column(name = "cnpj")
     public String cnpj
 
-    @Column(name = "senha")
-    public String senha
+    @Column(name = "senha_empresa")
+    public String senhaEmpresa
 
-    Empresa(String nome, String email, String cep, String estado, String pais, String descricao, String cnpj, String senha) {
-        this.nome = nome
-        this.email = email
-        this.cep = cep
-        this.estado = estado
-        this.pais = pais
-        this.descricao = descricao
+    Empresa(String nomeEmpresa, String emailEmpresa, String cepEmpresa, String estadoEmpresa, String paisEmpresa, String descricaoEmpresa, String cnpj, String senhaEmpresa) {
+        this.nomeEmpresa = nomeEmpresa
+        this.emailEmpresa = emailEmpresa
+        this.cepEmpresa = cepEmpresa
+        this.estadoEmpresa = estadoEmpresa
+        this.paisEmpresa = paisEmpresa
+        this.descricaoEmpresa = descricaoEmpresa
         this.cnpj = cnpj
-        this.senha = senha
+        this.senhaEmpresa = senhaEmpresa
     }
 
     Empresa() {
