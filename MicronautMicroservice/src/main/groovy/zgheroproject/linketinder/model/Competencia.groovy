@@ -1,45 +1,27 @@
 package zgheroproject.linketinder.model
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.Table
+import io.micronaut.data.annotation.*
 
-@Entity
-@Table(name = "competencias")
+@MappedEntity
 class Competencia {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name="id")
-    public int id
+    @GeneratedValue(GeneratedValue.Type.AUTO)
+    public int idCompetencia
 
-    @Column(name="competencia")
-    public String competencia
-
-    Competencia(int id, String competencia) {
-        this.id = id
-        this.competencia = competencia
-    }
+    public String nomeCompetencia
 
     Competencia() {
-
     }
 
-    String getCompetencia() {
-        return competencia
+    Competencia(String nomeCompetencia) {
+        this.nomeCompetencia = nomeCompetencia
     }
 
-    void setCompetencia(String competencia) {
-        this.competencia = competencia
+    String getNomeCompetencia() {
+        return nomeCompetencia
     }
 
-    int getId() {
-        return id
-    }
-
-    void setId(int id) {
-        this.id = id
+    void setNomeCompetencia(String nomeCompetencia) {
+        this.nomeCompetencia = nomeCompetencia
     }
 }

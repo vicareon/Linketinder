@@ -1,118 +1,107 @@
 package zgheroproject.linketinder.model
 
-import lombok.Data
-
 import javax.persistence.*
 
 @Entity
-@Data
 @Table(name = "candidatos", schema = "public")
 class Candidato{
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    @Column(name = "id")
-    public int id
-
-    @Column(name = "nome")
-    public String nome
-
-    @Column(name = "email")
-    public String email
-
-    @Column(name = "cep")
-    public String cep
-
-    @Column(name = "estado")
-    public String estado
-
-    @Column(name = "pais")
-    public String pais
-
-    @Column(name = "descricao")
-    public String descricao
-
     @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name = "id_candidato")
+    public int idCandidato
+
+    @Column(name = "nome_candidato")
+    public String nomeCandidato
+
+    @Column(name = "email_candidato")
+    public String emailCandidato
+
+    @Column(name = "cep_candidato")
+    public String cepCandidato
+
+    @Column(name = "estado_candidato")
+    public String estadoCandidato
+
+    @Column(name = "pais_candidato")
+    public String paisCandidato
+
+    @Column(name = "descricao_candidato")
+    public String descricaoCandidato
+
     @Column(name = "cpf")
     public String cpf
 
-    @Column(name = "formacao")
-    public String formacao
+    @Column(name = "formacao_candidato")
+    public String formacaoCandidato
 
     @Column(name = "idade")
     public String idade
 
-    @Column(name = "senha")
-    public String senha
+    @Column(name = "senha_candidato")
+    public String senhaCandidato
 
-    Candidato(String nome, String email, String cep, String estado, String pais, String descricao, String cpf, String formacao, String idade, String senha) {
-        this.nome = nome
-        this.email = email
-        this.cep = cep
-        this.estado = estado
-        this.pais = pais
-        this.descricao = descricao
+    Candidato(String nomeCandidato, String emailCandidato, String cepCandidato, String estadoCandidato, String paisCandidato, String descricaoCandidato, String cpf, String formacaoCandidato, String idade, String senhaCandidato) {
+        this.nomeCandidato = nomeCandidato
+        this.emailCandidato = emailCandidato
+        this.cepCandidato = cepCandidato
+        this.estadoCandidato = estadoCandidato
+        this.paisCandidato = paisCandidato
+        this.descricaoCandidato = descricaoCandidato
         this.cpf = cpf
-        this.formacao = formacao
+        this.formacaoCandidato = formacaoCandidato
         this.idade = idade
-        this.senha = senha
+        this.senhaCandidato = senhaCandidato
     }
 
     Candidato() {
     }
 
-    int getId() {
-        return id
+    String getNomeCandidato() {
+        return nomeCandidato
     }
 
-    void setId(int id) {
-        this.id = id
+    void setNomeCandidato(String nomeCandidato) {
+        this.nomeCandidato = nomeCandidato
     }
 
-    String getNome() {
-        return nome
+    String getEmailCandidato() {
+        return emailCandidato
     }
 
-    void setNome(String nome) {
-        this.nome = nome
+    void setEmailCandidato(String emailCandidato) {
+        this.emailCandidato = emailCandidato
     }
 
-    String getEmail() {
-        return email
+    String getCepCandidato() {
+        return cepCandidato
     }
 
-    void setEmail(String email) {
-        this.email = email
+    void setCepCandidato(String cepCandidato) {
+        this.cepCandidato = cepCandidato
     }
 
-    String getCep() {
-        return cep
+    String getEstadoCandidato() {
+        return estadoCandidato
     }
 
-    void setCep(String cep) {
-        this.cep = cep
+    void setEstadoCandidato(String estadoCandidato) {
+        this.estadoCandidato = estadoCandidato
     }
 
-    String getEstado() {
-        return estado
+    String getPaisCandidato() {
+        return paisCandidato
     }
 
-    void setEstado(String estado) {
-        this.estado = estado
+    void setPaisCandidato(String paisCandidato) {
+        this.paisCandidato = paisCandidato
     }
 
-    String getPais() {
-        return pais
+    String getDescricaoCandidato() {
+        return descricaoCandidato
     }
 
-    void setPais(String pais) {
-        this.pais = pais
-    }
-
-    String getDescricao() {
-        return descricao
-    }
-
-    void setDescricao(String descricao) {
-        this.descricao = descricao
+    void setDescricaoCandidato(String descricaoCandidato) {
+        this.descricaoCandidato = descricaoCandidato
     }
 
     String getCpf() {
@@ -123,12 +112,12 @@ class Candidato{
         this.cpf = cpf
     }
 
-    String getFormacao() {
-        return formacao
+    String getFormacaoCandidato() {
+        return formacaoCandidato
     }
 
-    void setFormacao(String formacao) {
-        this.formacao = formacao
+    void setFormacaoCandidato(String formacaoCandidato) {
+        this.formacaoCandidato = formacaoCandidato
     }
 
     String getIdade() {
@@ -139,11 +128,11 @@ class Candidato{
         this.idade = idade
     }
 
-    String getSenha() {
-        return senha
+    String getSenhaCandidato() {
+        return senhaCandidato
     }
 
-    void setSenha(String senha) {
-        this.senha = senha
+    void setSenhaCandidato(String senhaCandidato) {
+        this.senhaCandidato = senhaCandidato
     }
 }

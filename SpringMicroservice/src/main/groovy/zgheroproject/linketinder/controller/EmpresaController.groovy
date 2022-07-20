@@ -36,7 +36,6 @@ class EmpresaController{
         return empresaService.listarEmpresas()
     }
 
-    //atualizar
     @Transactional
     @RequestMapping(value = "/atualizar/nome/{cnpj}", method = RequestMethod.PATCH)
     @ResponseStatus(HttpStatus.OK)
