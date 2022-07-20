@@ -1,5 +1,6 @@
 package zgheroproject.linketinder.service
 
+import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.ComponentScan
 import zgheroproject.linketinder.model.Candidato
 import org.springframework.beans.factory.annotation.Autowired
@@ -13,6 +14,11 @@ class CandidatoService{
     @Autowired
     CandidatoRepository candidatoRepository
 
+    @Bean
+    CandidatoService candidatoServiceInit(){
+        return new CandidatoService()
+    }
+
     void salvarCandidato(Candidato candidato){
         candidatoRepository.save(candidato)
     }
@@ -25,8 +31,12 @@ class CandidatoService{
         return candidatoRepository.findByCpf(cpf)
     }
 
+    boolean verificarExistenciaCandidatoPorCpf(String cpf){
+        return candidatoRepository.existsByCpf(cpf)
+    }
+
     void excluirCandidato(String cpf){
-        candidatoRepository.deleteById(cpf)
+        candidatoRepository.deleteByCpf(cpf)
     }
 
     void atualizarNome(String cpf, String nome){

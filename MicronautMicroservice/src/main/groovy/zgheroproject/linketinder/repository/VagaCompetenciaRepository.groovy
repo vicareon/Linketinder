@@ -8,5 +8,6 @@ import zgheroproject.linketinder.model.VagaCompetencia
 interface VagaCompetenciaRepository extends CrudRepository<VagaCompetencia, Integer>{
     VagaCompetencia save(VagaCompetencia vagaCompetencia)
     List<VagaCompetencia> findAll()
-    void deleteById(int id)
+    List<VagaCompetencia> findByIdVagaCompetencia(int id)
+    void deleteByIdVagaCompetencia(int id)
 }

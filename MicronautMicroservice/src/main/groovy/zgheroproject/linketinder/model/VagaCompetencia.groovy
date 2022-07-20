@@ -1,57 +1,38 @@
 package zgheroproject.linketinder.model
 
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
-import javax.persistence.Table
+import io.micronaut.data.annotation.*
 
-@Entity
-@Table(name="vagas_competencias")
+@MappedEntity
 class VagaCompetencia {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name="id")
-    public int id
+    @GeneratedValue(GeneratedValue.Type.AUTO)
+    public int idVagaCompetencia
 
-    @Column(name="id_vaga")
-    public int id_vaga
+    public int idVaga
 
-    @Column(name="competencia")
-    public String competencia
+    public int idCompetencia
 
-    VagaCompetencia(int id, int id_vaga, String competencia) {
-        this.id = id
-        this.id_vaga = id_vaga
-        this.competencia = competencia
+    VagaCompetencia(int idVaga, int idCompetencia) {
+        this.idVaga = idVaga
+        this.idCompetencia = idCompetencia
     }
 
     VagaCompetencia() {
-
     }
 
-    int getId() {
-        return id
+    int getIdVaga() {
+        return idVaga
     }
 
-    void setId(int id) {
-        this.id = id
+    void setIdVaga(int idVaga) {
+        this.idVaga = idVaga
     }
 
-    int getId_vaga() {
-        return id_vaga
+    int getIdCompetencia() {
+        return idCompetencia
     }
 
-    void setId_vaga(int id_vaga) {
-        this.id_vaga = id_vaga
-    }
-
-    String getCompetencia() {
-        return competencia
-    }
-
-    void setCompetencia(String competencia) {
-        this.competencia = competencia
+    void setIdCompetencia(int idCompetencia) {
+        this.idCompetencia = idCompetencia
     }
 }

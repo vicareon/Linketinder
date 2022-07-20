@@ -8,5 +8,6 @@ import zgheroproject.linketinder.model.CandidatoCompetencia
 interface CandidatoCompetenciaRepository extends CrudRepository<CandidatoCompetencia, Integer>{
     CandidatoCompetencia save(CandidatoCompetencia candidatoCompetencia)
     List<CandidatoCompetencia> findAll()
-    void deleteById(int id)
+    List<CandidatoCompetencia> findByIdCandidatoCompetencia(int id)
+    void deleteByIdCandidatoCompetencia(int id)
 }

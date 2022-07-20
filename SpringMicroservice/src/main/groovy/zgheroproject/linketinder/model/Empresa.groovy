@@ -10,7 +10,6 @@ import javax.persistence.Id
 import javax.persistence.Table
 
 @Entity
-@Data
 @Table(name = "empresas", schema = "public")
 class Empresa{
     @Id
@@ -54,5 +53,69 @@ class Empresa{
     }
 
     Empresa() {
+    }
+
+    String getNomeEmpresa() {
+        return nomeEmpresa
+    }
+
+    void setNomeEmpresa(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa
+    }
+
+    String getEmailEmpresa() {
+        return emailEmpresa
+    }
+
+    void setEmailEmpresa(String emailEmpresa) {
+        this.emailEmpresa = emailEmpresa
+    }
+
+    String getCepEmpresa() {
+        return cepEmpresa
+    }
+
+    void setCepEmpresa(String cepEmpresa) {
+        this.cepEmpresa = cepEmpresa
+    }
+
+    String getEstadoEmpresa() {
+        return estadoEmpresa
+    }
+
+    void setEstadoEmpresa(String estadoEmpresa) {
+        this.estadoEmpresa = estadoEmpresa
+    }
+
+    String getPaisEmpresa() {
+        return paisEmpresa
+    }
+
+    void setPaisEmpresa(String paisEmpresa) {
+        this.paisEmpresa = paisEmpresa
+    }
+
+    String getDescricaoEmpresa() {
+        return descricaoEmpresa
+    }
+
+    void setDescricaoEmpresa(String descricaoEmpresa) {
+        this.descricaoEmpresa = descricaoEmpresa
+    }
+
+    String getCnpj() {
+        return cnpj
+    }
+
+    void setCnpj(String cnpj) {
+        this.cnpj = cnpj
+    }
+
+    String getSenhaEmpresa() {
+        return senhaEmpresa
+    }
+
+    void setSenhaEmpresa(String senhaEmpresa) {
+        this.senhaEmpresa = senhaEmpresa
     }
 }

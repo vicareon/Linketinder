@@ -14,6 +14,9 @@ interface EmpresaRepository extends CrudRepository<Empresa, String>{
     Empresa save(Empresa empresa)
     List<Empresa> findAll()
     List<Empresa> findByCnpj(String cnpj)
+    boolean existsByCnpj(String cnpj)
+
+    @Transactional
     void deleteByCnpj(String cnpj)
 
     @Transactional

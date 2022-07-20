@@ -20,8 +20,12 @@ class EmpresaService {
         return empresaRepository.findAll()
     }
 
+    List<Empresa> retornarEmpresaPorCnpj(String cnpj){
+        return empresaRepository.findByCnpj(cnpj)
+    }
+
     void excluirEmpresa(String cnpj){
-        empresaRepository.deleteById(cnpj)
+        empresaRepository.deleteByCnpj(cnpj)
     }
 
     void atualizarNome(String cnpj, String nome){
@@ -50,5 +54,9 @@ class EmpresaService {
 
     void atualizarSenha(String cnpj, String senha){
         empresaRepository.atualizarSenha(cnpj, senha)
+    }
+
+    boolean verificarExistenciaEmpresaPorCnpj(String cnpj){
+        return empresaRepository.existsByCnpj(cnpj)
     }
 }

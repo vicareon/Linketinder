@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param
 import zgheroproject.linketinder.model.Candidato
 import org.springframework.stereotype.Repository
 
-import javax.transaction.Transactional
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
 interface CandidatoRepository extends CrudRepository<Candidato, String>{
@@ -16,6 +16,9 @@ interface CandidatoRepository extends CrudRepository<Candidato, String>{
     List<Candidato> findAll()
     List<Candidato> findByCpf(String cpf)
 
+    boolean existsByCpf(String cpf)
+
+    @Transactional
     void deleteByCpf(String cpf)
 
     Candidato getReferenceByCpf(String cpf)
@@ -40,6 +43,7 @@ interface CandidatoRepository extends CrudRepository<Candidato, String>{
     @Query("update Candidato c set c.estadoCandidato = :estado where c.cpf = :cpf")
     void atualizarEstado(@Param(value = "cpf") String cpf, @Param(value = "estado") String estado)
 
+    @Transactional
     @Modifying(clearAutomatically = true)
     @Query("update Candidato c set c.paisCandidato = :pais where c.cpf = :cpf")
     void atualizarPais(@Param(value = "cpf") String cpf, @Param(value = "pais") String pais)
