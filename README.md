@@ -262,10 +262,19 @@ A fins de referência, as portas mapeadas na aplicação são:
 > Email: 8083
 
 ## Trilha 3: Jenkins
-**Assunto**: -
+**Assunto**: Automação de testes unitários com Jenkins e integração com Slack
 
-**Descrição do desafio**: -
+**Descrição do desafio**: Gerar a automação da execução de testes unitários de todos os microserviços do Linketinder com o envio de um relatório no canal do Slack.
 
-**Observações pessoais**: - 
+**Observações pessoais**: Chegamos ao final do Acelera ZG e a última trilha não foi tão difícil assim, o maior desafio mesmo foi encaixá-la com o desenvolvimento do projeto final, mentorias e palestras. Devido à isso não pude atender a vários requisitos (como deploy com Docker e testes com Grails/Kafka/Micronaut), mas o mínimo do mínimo está ok - uma das grandes lições do programa foi também a importância de entregar o mínimo e não se deixar paralisar com o perfeccionismo e o medo. 
 
-**Data de entrega**: pendente
+Algumas fontes e tutoriais que me ajudaram:
+- [Pipeline](https://www.jenkins.io/doc/book/pipeline/), na documentação oficial do Jenkins
+- [Executing Gradle builds on Jenkins](https://docs.gradle.org/current/userguide/jenkins.html), na documentação oficial do Gradle
+- [How to automate my Junit tests using Jenkins?](https://stackoverflow.com/questions/69684227/how-to-automate-my-junit-tests-using-jenkins), no StackOverflow
+- [Build and Deploy Gradle Projects with Jenkins](https://turkogluc.com/build-and-deploy-gradle-projects-with-jenkins/)
+- [Creating a Slack Notifier using Jenkins Pipeline](https://kunzleigh.com/creating-a-slack-notifier-using-jenkins-pipeline/), por Jim Rasche
+
+**Data de entrega**: 19/07/22
+
+Penso em revisitar esse projeto no futuro e tratá-lo com maior carinho para alcançar o seu devido potencial. Deixo aqui o meu muito obrigada ao pessoal envolvido no programa por me apoiarem ao longo desses 6 meses! Não achei que caberia tanta coisa na minha cabeça assim também. Foi uma aventura e tanto.
